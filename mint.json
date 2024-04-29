@@ -28,7 +28,7 @@
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+      "url": "rest"
     }
   ],
   "anchors": [
@@ -69,21 +69,87 @@
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Other",
       "pages": [
-        "api-reference/introduction"
+        "rest/other/get-server-time"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Certificate",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "rest/certificate/get-certificates",
+        "rest/certificate/get-certificate"
+      ]
+    },
+    {
+      "group": "Issuer",
+      "pages": [
+        "rest/issuer/get-issuers",
+        "rest/issuer/get-issuer"
+      ]
+    },
+    {
+      "group": "Organization",
+      "pages": [
+        "rest/organization/get-organization-links",
+        "rest/organization/get-organization-link",
+        "rest/organization/put-organization"
+      ]
+    },
+    {
+      "group": "SignatureRequestInvite",
+      "pages": [
+        "rest/signaturerequestinvite/get-signature-request-invites",
+        "rest/signaturerequestinvite/get-signature-request-invite",
+        "rest/signaturerequestinvite/post-signature-request-invite"
+      ]
+    },
+    {
+      "group": "SignatureRequest",
+      "pages": [
+        "rest/signaturerequest/get-signature-requests",
+        "rest/signaturerequest/get-signature-request",
+        "rest/signaturerequest/post-signature-request"
+      ]
+    },
+    {
+      "group": "Subject",
+      "pages": [
+        "rest/subject/get-subjects",
+        "rest/subject/get-subject"
+      ]
+    },
+    {
+      "group": "Witness",
+      "pages": [
+        "rest/witness/get-witnesses",
+        "rest/witness/get-witness",
+        "rest/witness/post-witness"
+      ]
+    },
+    {
+      "group": "ApiKey",
+      "pages": [
+        "rest/apikey/put-api-key",
+        "rest/apikey/post-api-key",
+        "rest/apikey/delete-api-key"
+      ]
+    },
+    {
+      "group": "OrganizationLink",
+      "pages": [
+        "rest/organizationlink/post-organization-link"
+      ]
+    },
+    {
+      "group": "OrganizationMember",
+      "pages": [
+        "rest/organizationmember/post-organization-member",
+        "rest/organizationmember/delete-organization-member"
       ]
     }
   ],
-  "openapi": "https://api.staging.plumaa.io/rest/v1/openapi.json", 
+  "openapi": "./openapi.json", 
   "footerSocials": {
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
