@@ -1,29 +1,29 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "PlumaaID API",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#2D9AFE",
+    "light": "#5DB2FF",
+    "dark": "#2D9AFE",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#2D9AFE",
+      "to": "#5DB2FF"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Soporte",
+      "url": "mailto:contact@plumaa.io"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Web App",
+    "url": "https://app.staging.plumaa.io/"
   },
   "tabs": [
     {
@@ -35,17 +35,17 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "https://docs.plumaa.id/"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://blog.plumaa.id/"
+    },
+    {
+      "name": "Github",
+      "icon": "github",
+      "url": "https://github.com/PlumaaID"
     }
   ],
   "navigation": [
@@ -149,10 +149,12 @@
       ]
     }
   ],
-  "openapi": "https://api.staging.plumaa.io/rest/v1/openapi.json", 
+  "openapi": "https://api.staging.plumaa.io/rest/v1/openapi.json",
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/PlumaaID",
+    "github": "https://github.com/PlumaaID"
+  },
+  "api": {
+    "baseUrl": "https://api.staging.plumaa.io/rest/v1"
   }
 }
