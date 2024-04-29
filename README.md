@@ -4,7 +4,7 @@ Click on `Use this template` to copy the Mintlify starter kit. The starter kit c
 
 - Guide pages
 - Navigation
-- Customizations
+- Customization
 - API Reference pages
 - Use of popular components
 
