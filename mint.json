@@ -83,7 +83,7 @@
       ]
     }
   ],
-  "openapi": "https://api.staging.plumaa.io/api/v1/openapi.json", 
+  "openapi": "https://api.staging.plumaa.io/rest/v1/openapi.json", 
   "footerSocials": {
     "x": "https://x.com/mintlify",
     "github": "https://github.com/mintlify",
