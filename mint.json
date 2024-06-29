@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Soporte",
-      "url": "mailto:contact@plumaa.io"
+      "url": "mailto:contact@plumaa.id"
     }
   ],
   "topbarCtaButton": {
     "name": "Web App",
-    "url": "https://app.staging.plumaa.io/"
+    "url": "https://app.staging.plumaa.id/"
   },
   "tabs": [
     {
@@ -71,7 +71,8 @@
     {
       "group": "Other",
       "pages": [
-        "rest/other/get-server-time"
+        "rest/other/get-server-time",
+        "rest/other/get-sign-file-url"
       ]
     },
     {
@@ -109,6 +110,7 @@
       "pages": [
         "rest/signaturerequest/get-signature-requests",
         "rest/signaturerequest/get-signature-request",
+        "rest/signaturerequest/put-signature-request",
         "rest/signaturerequest/post-signature-request"
       ]
     },
@@ -116,7 +118,8 @@
       "group": "Subject",
       "pages": [
         "rest/subject/get-subjects",
-        "rest/subject/get-subject"
+        "rest/subject/get-subject",
+        "rest/subject/get-subject-by-evm-address"
       ]
     },
     {
@@ -125,6 +128,27 @@
         "rest/witness/get-witnesses",
         "rest/witness/get-witness",
         "rest/witness/post-witness"
+      ]
+    },
+    {
+      "group": "Wallet",
+      "pages": [
+        "rest/wallet/get-wallet",
+        "rest/wallet/get-wallets"
+      ]
+    },
+    {
+      "group": "Token",
+      "pages": [
+        "rest/token/get-token",
+        "rest/token/get-tokens"
+      ]
+    },
+    {
+      "group": "TransferEvent",
+      "pages": [
+        "rest/transferevent/get-transfer-event",
+        "rest/transferevent/get-transfer-events"
       ]
     },
     {
@@ -138,7 +162,8 @@
     {
       "group": "OrganizationLink",
       "pages": [
-        "rest/organizationlink/post-organization-link"
+        "rest/organizationlink/post-organization-link",
+        "rest/organizationlink/delete-organization-link"
       ]
     },
     {
@@ -149,12 +174,12 @@
       ]
     }
   ],
-  "openapi": "https://api.staging.plumaa.io/rest/v1/openapi.json",
+  "openapi": "https://api.staging.plumaa.id/rest/v1/openapi.json",
   "footerSocials": {
     "x": "https://x.com/PlumaaID",
     "github": "https://github.com/PlumaaID"
   },
   "api": {
-    "baseUrl": "https://api.staging.plumaa.io/rest/v1"
+    "baseUrl": "https://api.staging.plumaa.id/rest/v1"
   }
 }
