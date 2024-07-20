@@ -32,17 +32,30 @@ La [firma digital](https://es.wikipedia.org/wiki/Firma_digital) es un tipo de es
 
 En México, el [Código de Comercio](https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf) considerará para actos de comercio se a una firma como _firma electrónica avanzada_ si cumple con los siguientes requisitos en conformidad con su artículo 97:
 
-> 1. Los Datos de Creación de la Firma, en el contexto en que son utilizados, corresponden exclusivamente al Firmante;
-> 2. Los Datos de Creación de la Firma estaban, en el momento de la firma, bajo el control exclusivo del Firmante;
-> 3. Es posible detectar cualquier alteración de la Firma Electrónica hecha después del momento de la firma, y
-> 4. Respecto a la integridad de la información de un Mensaje de Datos, es posible detectar cualquier alteración de ésta hecha después del momento de la firma.
+<AccordionGroup>
+  <Accordion title="El firmante es identificable" icon="id-card">
+    > Los Datos de Creación de la Firma, en el contexto en que son utilizados, corresponden exclusivamente al Firmante;
 
-En otras palabras:
+    La [Infraestructura de Seguridad Extendida](#infraestructura-de-seguridad-extendida-ies) de Banxico asegura que el firmante es identificable a través de un certificado digital emitido por un Proveedor de Servicios de Certificación (PSC).
+  </Accordion>
 
-1. El firmante es identificable
-2. Nadie más que el firmante tiene acceso a la llave privada que firma
-3. La firma electrónica es íntegra
-4. La información firmada es íntegra
+  <Accordion title="Nadie más que el firmante tiene acceso a la llave privada que firma" icon="signature">
+    > Los Datos de Creación de la Firma estaban, en el momento de la firma, bajo el control exclusivo del Firmante;
+
+    Con Plumaa ID, los datos de creación de firma nunca abandonan el dispositivo y se generan en el momento de la firma.
+  </Accordion>
+
+  <Accordion title="La firma electrónica es íntegra" icon="fingerprint">
+    > Es posible detectar cualquier alteración de la Firma Electrónica hecha después del momento de la firma, y
+
+    Cualquier mínina alteración en los datos electrónicos que representan la firma electrónica es fácilmente detectable.
+  </Accordion>
+  <Accordion title="La información firmada es íntegra" icon="fingerprint">
+    > Respecto a la integridad de la información de un Mensaje de Datos, es posible detectar cualquier alteración de ésta hecha después del momento de la firma.
+  
+    Alterar el más mínimo detalle de la información firmada invalida la firma electrónica. 
+  </Accordion>
+</AccordionGroup>
 
 Gracias a los métodos matemáticos inherentes a la firma electrónica avanzada, es posible garantizar estas propiedades de forma automática y sin la necesidad de un perito calígrafo.
 
@@ -54,7 +67,7 @@ El _no repudio_ es una propiedad de la firma electrónica avanzada que garantiza
 
 ### Control total del firmante
 
-La aplicación móvil de Plumaa ID garantiza que el firmante tiene el control total de su llave privada. Esto es posible a través de técnicas de cifrado criptográfico que utilizan tecnologías implementadas en dispositivos móviles._createMdxContent
+La aplicación móvil de Plumaa ID garantiza que el firmante tiene el control total de su llave privada. Esto es posible a través de técnicas de cifrado criptográfico que utilizan tecnologías implementadas en dispositivos móviles.
 
 Con estas tecnologías, la llave privada nunca abandona el dispositivo del firmante, lo que garantiza que nadie más que el firmante pueda firmar documentos en su nombre. Nisiquiera para el equipo de Plumaa ID es posible acceder a la llave privada del firmante.
 
@@ -91,7 +104,7 @@ flowchart TB
     Persona -- firma --> Documento
 ```
 
-## Infraestructura de Seguridad Extendida (IES)
+## Dependencia en la Infraestructura de Seguridad Extendida (IES)
 
 La [Infraestructura de Seguridad Extendida del Banco de México](https://www.banxico.org.mx/servicios/certificados-ies-firma-electr.html) es una [infraestructura de clave pública](https://es.wikipedia.org/wiki/Infraestructura_de_clave_p%C3%BAblica) que permite a los PSCs emitir certificados de firma electrónica avanzada a personas físicas y morales.
 
@@ -99,12 +112,10 @@ Este modelo sostiene la cadena de confianza utilizando el mismo algoritmo de fir
 
 <img width="500" src="/images/foundations/ies-model.png" />
 
-## Online Certificate Status Protocol (OCSP)
+## Validación de Certificado - Online Certificate Status Protocol (OCSP)
 
 OCSP es un protocolo de red que se utiliza para obtener el estado de un certificado digital. Para la firma electrónica avanzada, este protocolo permite evaluar si un certificado sigue siendo válido.
 
 En el caso de que un usuario pierda su llave privada y el acceso total a su firma, este puede revocar su certificado a través del PSC emisor. De esta forma, Plumaa ID es incapaz de procesar una firma que provenga de un certificado previamente revocado.
 
 <Warning>Por esta razón es de suma relevancia notificar a la autoridad cuando perdemos el control de nuestra llave privada</Warning>
-
-
