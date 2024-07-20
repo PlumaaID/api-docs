@@ -27,16 +27,19 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Guías",
+      "url": "guides"
+    },
+    {
+      "name": "Avanzado",
+      "url": "advanced"
+    },
+    {
+      "name": "Referencia de API",
       "url": "rest"
     }
   ],
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.plumaa.id/"
-    },
     {
       "name": "Blog",
       "icon": "newspaper",
@@ -52,9 +55,8 @@
     {
       "group": "Básicos",
       "pages": [
-        "basics/introduction",
+        "introduction",
         "basics/what-is-plumaa-id",
-        "basics/why-plumaa-id",
         "basics/foundations",
         "basics/terminology",
         "basics/FAQ"
@@ -68,6 +70,7 @@
         "guides/app/sign-a-message",
         "guides/app/link-to-an-organization",
         "guides/webapp/setup-organization",
+        "guides/webapp/add-member",
         "guides/webapp/link-to-a-user",
         "guides/webapp/create-signature-request",
         "guides/webapp/create-signature-request-invite",
@@ -77,25 +80,25 @@
     {
       "group": "Firma Electrónica",
       "pages": [
-        "electronic-signature/overview",
-        "electronic-signature/what-is-an-electronic-signature",
-        "electronic-signature/what-is-an-advanced-electronic-signature",
-        "electronic-signature/trust-service-providers",
-        "electronic-signature/data-message-conservation"
+        "advanced/electronic-signature/overview",
+        "advanced/electronic-signature/what-is-an-electronic-signature",
+        "advanced/electronic-signature/what-is-an-advanced-electronic-signature",
+        "advanced/electronic-signature/trust-service-providers",
+        "advanced/electronic-signature/data-message-conservation"
       ]
     },
     {
       "group": "Sistema de Información",
       "pages": [
-        "information-system/overview",
-        "information-system/what-is-an-information-system",
-        "information-system/what-is-a-digital-identity",
-        "information-system/blockchain",
-        "information-system/ERC721",
-        "information-system/components/witness",
-        "information-system/components/endorser",
-        "information-system/trustless-data-message-conservation",
-        "information-system/how-to-tokenize"
+        "advanced/information-system/overview",
+        "advanced/information-system/what-is-an-information-system",
+        "advanced/information-system/what-is-a-digital-identity",
+        "advanced/information-system/blockchain",
+        "advanced/information-system/ERC721",
+        "advanced/information-system/components/witness",
+        "advanced/information-system/components/endorser",
+        "advanced/information-system/trustless-data-message-conservation",
+        "advanced/information-system/how-to-tokenize"
       ]
     },
     {
