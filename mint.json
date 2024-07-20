@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "PlumaaID API",
+  "name": "Plumaa ID",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -50,22 +50,60 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Básicos",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "basics/introduction",
+        "basics/what-is-plumaa-id",
+        "basics/why-plumaa-id",
+        "basics/foundations",
+        "basics/terminology",
+        "basics/FAQ"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Guías",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "guides/overview",
+        "guides/app/onboarding",
+        "guides/app/sign-a-message",
+        "guides/app/link-to-an-organization",
+        "guides/webapp/setup-organization",
+        "guides/webapp/link-to-a-user",
+        "guides/webapp/create-signature-request",
+        "guides/webapp/create-signature-request-invite",
+        "guides/verify-a-signature"
+      ]
+    },
+    {
+      "group": "Firma Electrónica",
+      "pages": [
+        "electronic-signature/overview",
+        "electronic-signature/what-is-an-electronic-signature",
+        "electronic-signature/what-is-an-advanced-electronic-signature",
+        "electronic-signature/trust-service-providers",
+        "electronic-signature/data-message-conservation"
+      ]
+    },
+    {
+      "group": "Sistema de Información",
+      "pages": [
+        "information-system/overview",
+        "information-system/what-is-an-information-system",
+        "information-system/what-is-a-digital-identity",
+        "information-system/blockchain",
+        "information-system/ERC721",
+        "information-system/components/witness",
+        "information-system/components/endorser",
+        "information-system/trustless-data-message-conservation",
+        "information-system/how-to-tokenize"
+      ]
+    },
+    {
+      "group": "Casos de uso",
+      "pages": [
+        "use-cases/overview",
+        "use-cases/verify-identity",
+        "use-cases/authenticate"
       ]
     },
     {
@@ -174,12 +212,12 @@
       ]
     }
   ],
-  "openapi": "https://api.staging.plumaa.id/rest/v1/openapi.json",
+  "openapi": "https://api.plumaa.id/rest/v1/openapi.json",
   "footerSocials": {
     "x": "https://x.com/PlumaaID",
     "github": "https://github.com/PlumaaID"
   },
   "api": {
-    "baseUrl": "https://api.staging.plumaa.id/rest/v1"
+    "baseUrl": "https://api.plumaa.id/rest/v1"
   }
 }
