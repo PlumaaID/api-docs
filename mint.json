@@ -98,7 +98,6 @@
         "advanced/information-system/ERC721",
         "advanced/information-system/components/witness",
         "advanced/information-system/components/endorser",
-        "advanced/information-system/trustless-data-message-conservation",
         "advanced/information-system/how-to-tokenize"
       ]
     },
