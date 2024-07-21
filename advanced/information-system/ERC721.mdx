@@ -3,4 +3,20 @@ title: ERC-721
 description: 'Aprende sobre el estándar para tokens con identificadores'
 ---
 
-🚧 En progreso...
+El [ERC-721](https://eips.ethereum.org/EIPS/eip-721) es un estándar creado, mantenido y adoptado por la comunidad de desarrolladores blockchain para la representación de activos no fungibles (NFT) en la red Ethereum. Este estándar define una interfaz mínima que los **contratos inteligentes** deben implementar para permitir la gestión de tokens no fungibles.
+
+## Identificación del activo
+
+La principal característica que define el estándar para diferenciar cada activo entre sí es el **identificador**.
+
+Dependiendo de la implementación del contrato inteligente, el identificador puede tener un significado distinto.
+
+## Trazabilidad
+
+El estándar define una serie de eventos en su interfaz que son emitidos por el contrato inteligente para notificar cambios a la propiedad de los activos. Esto permite **reconstruir una cadena no interrumpida de endosos** para cada activo en particular, fundamental para la transferencia de títulos de crédito.
+
+## Tokenización
+
+Debido a que un mensaje de datos es identificado por su digestivo (ver [fundamento técnico](/advanced/electronic-signature/what-is-an-advanced-electronic-signature#fundamento-tecnico)) y dicho digestivo es **resistente a preimagen** y **resistente a colisiones**, entonces dicho digestivo puede ser utilizado para identificar a un activo representado bajo el estándar ERC-721.
+
+El principio fundamental de la tokenización con Plumaa ID es que **a)** la identidad criptográfica permite a los usuarios firmar endosos de forma no permisionada y segura, y **b)** la trazabilidad de los endosos permite a los usuarios demostrar la propiedad de un activo representado en el documento.
