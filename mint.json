@@ -22,8 +22,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Web App",
-    "url": "https://app.staging.plumaa.id/"
+    "name": "Webapp",
+    "url": "https://app.plumaa.id/"
   },
   "tabs": [
     {
@@ -106,6 +106,7 @@
       "group": "Casos de uso",
       "pages": [
         "use-cases/overview",
+        "use-cases/documents",
         "use-cases/verify-identity",
         "use-cases/authenticate"
       ]
