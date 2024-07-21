@@ -3,4 +3,36 @@ title: ¿Qué es una identidad digital?
 description: 'Descubre qué es una identidad digital y cómo se relaciona con Plumaa ID'
 ---
 
-🚧 En progreso...
+La identidad digital es la representación de una personalidad en un entorno digital. Dicha representación podrá requerir distintas características dependiendo del contexto en el que se utilice.
+
+Por ejemplo, la identidad digital en un comercio en línea se verá representada a través de una cuenta de usuario. No obstante, cuando se trata de pagos, la identidad digital requerirá de un método más robusto de autenticación como una tarjeta de crédito y un NIP.
+
+## La identidad como un expediente
+
+Una forma de representar la identidad digital es a través de un expediente. Por lo general, la digitalización de la identidad requiere documentación que le respalde.
+
+Las principales desventajas de este modelo incluye la **falsificación de documentos** y además, que los protocolos de seguridad y acceso se basan en la **confianza** hacia el sistema y su capacidad para proteger el expediente.
+
+## Identidad criptográfica
+
+En el contexto de sistemas de información financiera y de seguridad, la identidad digital se limita a representar la [_expresión de la voluntad_](/basics/foundations#la-expresion-de-la-voluntad), ya que una autorización auténtica es suficiente para realizar transacciones.
+
+Esta autorización expresa tiene como requisito fundamental la **autenticidad**, misma que es una propiedad de la información que se obtiene a través de los sistemas de criptografía asimétrica como el [criptosistema RSA](advanced/electronic-signature/what-is-an-advanced-electronic-signature#criptosistema-rsa) utilizado en la firma electrónica avanzada.
+
+No obstante, garantizar la autenticidad de un mensaje de datos no necesariamente nos garantiza la identidad legal (i.e. nombre, apellido) del firmante.
+
+<Note>La capacidad que tiene una firma RSA para autenticar sin estar vinculado a una persona física se le conoce como **pseudónimo**.</Note>
+
+### Identidad legal
+
+Asignar nombre y apellido a un pseudónimo es la principal razón para la existencia de procedimientos de [KYC](/use-cases/verify-identity#know-your-customer-kyc) y prevención de lavado de dinero en sistemas financieros.
+
+Tradicionalmente, existe mucha fricción entre la identidad legal y la identidad digital debido que es difícil establecer un vínculo entre ambas. Este vínculo frecuentemente se logra con la digitalización de identificaciones físicas o inteligencia artificial.
+
+En el caso de la Firma Electrónica Avanzada, la identidad legal está garantizada por el [certificado de firma electrónica avanzada](/advanced/electronic-signature/trust-service-providers#certificados-de-firma-electronica-avanzada) emitido por el SAT como PSC.
+
+### Ventajas de la criptografía
+
+Contrario a los sistemas que documentan la identidad como un expediente, la identidad criptográfica es **interoperable** y obedece a **estándares internacionales**. Esto quiere decir que los sistemas basados en este tipo de autorizaciones podrían ser utilizados directamente por el usuario **sin la necesidad de intermediarios**.
+
+Además, la propiedad de no repudio también está presente con este tipo de firmas, y de hecho, es por eso que los sistemas blockchain permiten ejecutar transacciones financieras sin la necesidad de un intermediario y de forma inmediata; gracias a la inmediata verificación de la firma.

@@ -92,13 +92,12 @@
       "group": "Sistema de Información",
       "pages": [
         "advanced/information-system/overview",
-        "advanced/information-system/what-is-an-information-system",
         "advanced/information-system/what-is-a-digital-identity",
         "advanced/information-system/blockchain",
         "advanced/information-system/ERC721",
+        "advanced/information-system/tokenization",
         "advanced/information-system/components/witness",
-        "advanced/information-system/components/endorser",
-        "advanced/information-system/how-to-tokenize"
+        "advanced/information-system/components/endorser"
       ]
     },
     {
