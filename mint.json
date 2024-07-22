@@ -67,15 +67,26 @@
       "group": "Guías",
       "pages": [
         "guides/overview",
+        "guides/verify-a-signature"
+      ]
+    },
+    {
+      "group": "Guías app",
+      "pages": [
         "guides/app/onboarding",
         "guides/app/sign-a-message",
         "guides/app/link-to-an-organization",
+        "guides/webapp/login-webapp"
+      ]
+    },
+    {
+      "group": "Guías webapp",
+      "pages": [
         "guides/webapp/setup-organization",
         "guides/webapp/add-member",
         "guides/webapp/link-to-a-user",
         "guides/webapp/create-signature-request",
-        "guides/webapp/create-signature-request-invite",
-        "guides/verify-a-signature"
+        "guides/webapp/create-signature-request-invite"
       ]
     },
     {
@@ -93,7 +104,12 @@
       "pages": [
         "advanced/information-system/overview",
         "advanced/information-system/what-is-a-digital-identity",
-        "advanced/information-system/ERC721",
+        "advanced/information-system/ERC721"
+      ]
+    },
+    {
+      "group": "Componentes del protocolo",
+      "pages": [
         "advanced/information-system/components/witness",
         "advanced/information-system/components/endorser"
       ]
