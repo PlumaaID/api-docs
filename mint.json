@@ -17,7 +17,7 @@
   },
   "topbarLinks": [
     {
-      "name": "Soporte",
+      "name": "Contacto",
       "url": "mailto:contact@plumaa.id"
     }
   ],
@@ -41,9 +41,14 @@
   ],
   "anchors": [
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://blog.plumaa.id/"
+      "name": "Comunidad",
+      "icon": "users",
+      "url": "https://plumaa.hall.community/"
+    },
+    {
+      "name": "Soporte",
+      "icon": "life-ring",
+      "url": "https://plumaa.hall.community/support-QrQnRQlHB0WC"
     },
     {
       "name": "Github",
@@ -127,6 +132,7 @@
       "group": "Other",
       "pages": [
         "rest/other/get-server-time",
+        "rest/other/get-signature-request-timeseries",
         "rest/other/get-sign-file-url"
       ]
     },
@@ -182,7 +188,9 @@
       "pages": [
         "rest/witness/get-witnesses",
         "rest/witness/get-witness",
-        "rest/witness/post-witness"
+        "rest/witness/post-witness",
+        "rest/witness/post-schedule-grouped-nom151-certification",
+        "rest/witness/post-nom151-certification"
       ]
     },
     {
@@ -193,17 +201,17 @@
       ]
     },
     {
-      "group": "Token",
+      "group": "Endorsable",
       "pages": [
-        "rest/token/get-token",
-        "rest/token/get-tokens"
+        "rest/endorsable/get-endorsable",
+        "rest/endorsable/get-endorsables"
       ]
     },
     {
-      "group": "TransferEvent",
+      "group": "EndorseEvent",
       "pages": [
-        "rest/transferevent/get-transfer-event",
-        "rest/transferevent/get-transfer-events"
+        "rest/endorseevent/get-endorse-event",
+        "rest/endorseevent/get-endorse-events"
       ]
     },
     {

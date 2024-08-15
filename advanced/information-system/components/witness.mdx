@@ -7,9 +7,56 @@ El protocolo de Plumaa ID involucra a un testigo. Este es un actor imparcial que
 
 Por su naturaleza, el testigo no tiene acceso a los datos del documento ni a la identidad de los firmantes. Su única función es registrar la fecha en la que observó el digestivo.
 
-### Contratos
+### Witness
 
-| Network          | ChainID | Witness Proxy                                                                                                                |
-| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- | 
-| Arbitrum         | 42161   | [0x008CFe0543dB8d5000219433dca6E59D482177Aa](https://arbiscan.io/address/0x008CFe0543dB8d5000219433dca6E59D482177Aa)         |
-| Arbitrum Sepolia | 421614  | [0x008CFe0543dB8d5000219433dca6E59D482177Aa](https://sepolia.arbiscan.io/address/0x008CFe0543dB8d5000219433dca6E59D482177Aa) |
+![Testigo](/images/advanced/information-system/components/witness/witness.png)
+
+[WitnessCo](https://witness.com) es una compañía de investigación y desarrollo enfocada en acelerar la adopción de _propiedad digital_ y avanzar la forma en que creamos, verificamos y compartimos contenido digital.
+
+A través de Witness, Plumaa ID obtiene un testigo imparcial que garantiza la conservación de mensajes de datos y la fecha en la que se observaron. Todos los documentos que son conservados en Plumaa ID son observados por Witness, lo que garantiza la integridad y fecha cierta de los documentos.
+
+#### ¿Cómo funciona?
+
+<AccordionGroup>
+  <Accordion title="Integridad del mensaje de datos" icon="fingerprint">
+    ![Witness1](/images/advanced/information-system/components/witness/witness-1.svg)
+
+    Plumaa ID genera un hash que identifica al documento en el momento de su creación y con su forma definitiva. Estos mensajes de datos puede ser:
+
+    - PDFs
+    - Texto Plano
+    - Pagarés
+    - Imágenes
+    - Datos estructurados
+  </Accordion>
+
+  <Accordion title="Observación" icon="eye">
+    ![Witness2](/images/advanced/information-system/components/witness/witness-2.svg)
+
+    Cada mensaje de datos es observado por el testigo, quien registra múltiples documentos en conjunto de forma periódica en diversas blockchains. Al ser registrado en blockchain, este mensaje de datos puede ser utilizado en otras aplicaciones para emitir propiedad digital.
+  </Accordion>
+
+  <Accordion title="Prueba" icon="lock">
+    ![Witness3](/images/advanced/information-system/components/witness/witness-3.svg)
+
+    El testigo ofrece una prueba de observación y Plumaa ID conserva una copia. Esta prueba es un _merkle path_ que permite a cualquier persona verificar la observación del testigo sin necesidad de intermediarios.
+
+    <Tip>
+      Guardar esta prueba es útil para demostrar la fecha en la que se observó un documento, incluso en el caso de que el testigo o Plumaa ID desaparezcan.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Verificación" icon="check">
+    ![Witness4](/images/advanced/information-system/components/witness/witness-4.svg)
+
+    Utilizando la prueba de observación, es posible demostrar el _timestamp_ de cualquier mensaje de datos.
+  </Accordion>
+</AccordionGroup>
+
+#### Explorador
+
+WitnessCo cuenta con un explorador que permite verificar la observación de un mensaje de datos. Este explorador es una herramienta que permite a cualquier persona verificar la observación de un mensaje de datos sin necesidad de intermediarios.
+
+<Card title="Explorador" icon="eye" href="https://scan.witness.co/">
+  Consulta la conservación de digestivos de mensajes de datos en el explorador de WitnessCo.
+</Card>
