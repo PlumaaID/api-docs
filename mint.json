@@ -109,7 +109,8 @@
       "pages": [
         "advanced/information-system/overview",
         "advanced/information-system/what-is-a-digital-identity",
-        "advanced/information-system/ERC721"
+        "advanced/information-system/ERC721",
+        "advanced/information-system/document-lifecycle"
       ]
     },
     {
