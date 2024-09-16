@@ -5,15 +5,19 @@ description: 'Te explicamos cómo funciona Plumaa ID'
 
 # ¿Qué es una firma?
 
-Una firma _autógrafa_ tradicional es un signo distintivo que una persona pone en un documento para manifestar su voluntad de aceptar las condiciones que en él se establecen. En el mundo digital, una firma es un conjunto de datos que se adjunta a un documento para garantizar su autenticidad y la identidad de su autor.
+Una firma _autógrafa_ tradicional es un signo distintivo que una persona traza en un documento para manifestar su voluntad de aceptar las condiciones que en él se establecen. En el mundo digital, una firma es un conjunto de datos que se adjunta a un documento para garantizar su autenticidad y la identidad de su autor.
 
-En el caso concreto de las firmas electrónicas basadas en criptografía como las que produce Plumaa ID, los datos de la firma están lógicamente relacionados a un identificador, mismo que está vinculado al firmante a través de un certificado digital.
+En el caso concreto de las firmas electrónicas basadas en criptografía como las [que produce Plumaa ID](/basics/terminology#firma-electronica-avanzada), los datos de la firma están lógicamente relacionados a un identificador, mismo que está vinculado al firmante a través de un certificado digital.
 
-Contrario a lo que se podría pensar, una firma electrónica no es una imagen de la firma autógrafa del firmante, sino un conjunto de datos que se generan a partir de la información del documento y la <Tooltip tip="Es un número secreto muy largo usualmente entregado en un archivo (.key), y que a través de fórmulas matemáticas produce un resultado único para el firmante y el documento">clave privada</Tooltip> del firmante.
+Contrario a lo que se podría pensar, una firma electrónica no es una imagen de la firma autógrafa del firmante, sino un conjunto de datos que se generan a partir de la información del documento y la <Tooltip tip="Es un número secreto muy largo usualmente entregado en un archivo (.key), y que a través de fórmulas matemáticas produce un resultado único para el firmante y el documento">[llave privada](/basics/terminology#llave-privada)</Tooltip> del firmante.
 
 ## La expresión de la voluntad
 
-En el mundo físico, la expresión de la voluntad normalmente se manifiesta a través de la escritura de un nombre o la realización de un dibujo. Por tanto, su prueba en juicio se basa en la comparación de la firma con la de un documento de identidad o con una firma auténtica.
+En el mundo físico, la expresión de la voluntad normalmente se manifiesta a través de la escritura de un nombre o la realización de un dibujo. Por tanto, su prueba en juicio se basa en la comparación de la firma con la de un documento de identidad o con una firma autógrafa.
+
+<Warning>
+Al compartir fotografías de tus documentos digitales y escaneos faciales, los usuarios se ven expuestos a riesgos de robo de identidad de forma innecesaria.
+</Warning>
 
 Este proceso es conocido como _peritaje caligráfico_ y es realizado por un _perito calígrafo_ que es un experto en la identificación de firmas y escritura. Sin embargo, el proceso es lento, tardado, costoso y además involucra una evaluación subjetiva.
 
@@ -22,15 +26,19 @@ En el mundo digital, la expresión de la voluntad se puede recrear esencialmente
 1. **Recrear los requerimientos físicos en digital**
 2. **Utilizar un enfoque basado en matemáticas**
 
-El primero usualmente toma la forma de una _firma autógrafa en dispositivo digital_ o a través del _intercambio de claves_ mayormente basados en esquemas simples como el NIP de una tarjeta de crédito.
+El primero usualmente toma la forma de una _firma autógrafa en dispositivo digital_ o a través del _intercambio de claves_ como el NIP de una tarjeta de crédito.
 
-Por el contrario, el segundo enfoque proporciona la capacidad de garantizar la autenticidad de la firma y la identidad del firmante a través de métodos matemáticos, lo que remueve la subjetividad. La tecnología de Plumaa ID depende mayormente de servicios abiertos debido a que su seguridad es garantizada a través de la transparencia y la descentralización.
+<Note>
+Este esquema también es conocido como [_firma electrónica simple_](/basics/terminology#firma-electronica-simple).
+</Note>
+
+Por el contrario, el segundo enfoque proporciona la capacidad de garantizar la autenticidad de la firma y la identidad del firmante a través de métodos matemáticos, removiendo la subjetividad. La tecnología de Plumaa ID depende mayormente de servicios abiertos debido a que su seguridad es garantizada a través de la transparencia y la descentralización.
 
 ## Firma digital
 
 La [firma digital](https://es.wikipedia.org/wiki/Firma_digital) es un tipo de esquema que garantiza ciertas propiedades de la información, como el _no repudio_ y la _integridad_.
 
-En México, el [Código de Comercio](https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf) considerará para actos de comercio se a una firma como _firma electrónica avanzada_ si cumple con los siguientes requisitos en conformidad con su artículo 97:
+En México, el [Código de Comercio](https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf) considera una firma como _fiable_ si cumple con los siguientes requisitos en conformidad con su artículo 97:
 
 <AccordionGroup>
   <Accordion title="El firmante es identificable" icon="id-card">
@@ -69,7 +77,7 @@ El _no repudio_ es una propiedad de la firma electrónica avanzada que garantiza
 
 La aplicación móvil de Plumaa ID garantiza que el firmante tiene el control total de su llave privada. Esto es posible a través de técnicas de cifrado criptográfico que utilizan tecnologías implementadas en dispositivos móviles.
 
-Con estas tecnologías, la llave privada nunca abandona el dispositivo del firmante, lo que garantiza que nadie más que el firmante pueda firmar documentos en su nombre. Nisiquiera para el equipo de Plumaa ID es posible acceder a la llave privada del firmante.
+<Note>La llave privada nunca abandona el dispositivo y es almacenada de forma segura en el almacenamiento seguro del dispositivo.</Note>
 
 # Seguridad
 
@@ -82,7 +90,7 @@ La seguridad del firmado electrónico depende principalmente de 2 factores:
 
 ### Algoritmo de firma (RSA)
 
-El algoritmo de firma es el método matemático que se utiliza para generar la firma electrónica. El SAT y otros PSCs utiliza el algoritmo [RSA](https://es.wikipedia.org/wiki/RSA) con una longitud de llave de 2048 bits.
+El algoritmo de firma es el método matemático que se utiliza para generar la firma electrónica. [El SAT](/basics/terminology#servicio-de-administracion-tributaria-sat) y otros [PSCs](/basics/terminology#proveedores-de-servicios-de-certificacion-psc) utiliza el [algoritmo RSA](/advanced/electronic-signature/what-is-an-advanced-electronic-signature#criptosistema-rsa) con una longitud de llave de 2048 bits.
 
 Dicho algoritmo prueba con certeza el vínculo entre la firma y una clave pública. Sin embargo, lo que vincula a una persona registrada e identificada ante una autoridad con una clave pública es la cadena de confianza.
 

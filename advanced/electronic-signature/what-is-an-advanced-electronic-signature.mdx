@@ -41,7 +41,7 @@ Estos certificados los puedes encontrar en la fuente oficial de la [IES de Banxi
 
 ### No Repudio
 
-El no repudio es una propiedad de la firma electrónica que se originó como un concepto de la criptografía. En la práctica, es una construcción matemática que es resultado de diferentes componentes lógicos envueltos entre el firmante, los PSCs, el Banco de México.
+El no repudio es una propiedad de la firma electrónica que se originó como un concepto de la criptografía. En la práctica, es una construcción matemática que es resultado de diferentes componentes lógicos envueltos entre el firmante, los [PSCs](/advanced/electronic-signature/trust-service-providers), el Banco de México.
 
 <Note>
 La seguridad bancaria depende de los algoritmos de firmado criptográfico y se basan en el no repudio para automatizar operaciones financieras de alto riesgo.
@@ -86,11 +86,11 @@ sequenceDiagram
     B -->> B: Calcula hash
 
     opt Verificación de integridad
-        A -->> B: Envía Documento Alterado
+        A -->> B: Envía Documento
         B -->> B: Calcula hash y compara
 
         alt Hashes no coinciden
-            B -->> A: Rechaza el documento
+            B -->> A: Rechaza el documento por alteración
         else Hashes coinciden
             B -->> A: Acepta el documento
         end
