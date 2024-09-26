@@ -27,12 +27,8 @@
   },
   "tabs": [
     {
-      "name": "Guías",
-      "url": "guides"
-    },
-    {
       "name": "Avanzado",
-      "url": "technical"
+      "url": "advanced"
     },
     {
       "name": "Referencia de API",
@@ -87,55 +83,29 @@
       ]
     },
     {
-      "group": "Guías",
+      "group": "Funciones avanzadas",
       "pages": [
-        "guides/overview",
-        "guides/verify-a-signature"
-      ]
-    },
-    {
-      "group": "Aplicación Móvil",
-      "pages": [
-        "guides/app/onboarding",
-        "guides/app/sign-a-message",
-        "guides/app/link-to-an-organization",
-        "guides/app/login-webapp"
-      ]
-    },
-    {
-      "group": "Back Office",
-      "pages": [
-        "guides/webapp/setup-organization",
-        "guides/webapp/add-member",
-        "guides/webapp/link-to-a-user",
-        "guides/webapp/create-signature-request",
-        "guides/webapp/create-signature-request-invite"
+        "advanced/overview",
+        "advanced/organizations",
+        "advanced/documents"
       ]
     },
     {
       "group": "Firma Electrónica",
       "pages": [
-        "technical/electronic-signature/overview",
-        "technical/electronic-signature/what-is-an-electronic-signature",
-        "technical/electronic-signature/what-is-an-advanced-electronic-signature",
-        "technical/electronic-signature/trust-service-providers",
-        "technical/electronic-signature/data-message-conservation"
+        "advanced/technical/electronic-signature/what-is-an-electronic-signature",
+        "advanced/technical/electronic-signature/what-is-an-advanced-electronic-signature",
+        "advanced/technical/electronic-signature/trust-service-providers",
+        "advanced/technical/electronic-signature/data-message-conservation"
       ]
     },
     {
       "group": "Sistema de Información",
       "pages": [
-        "technical/information-system/overview",
-        "technical/information-system/what-is-a-digital-identity",
-        "technical/information-system/ERC721",
-        "technical/information-system/document-lifecycle"
-      ]
-    },
-    {
-      "group": "Componentes del protocolo",
-      "pages": [
-        "technical/information-system/components/witness",
-        "technical/information-system/components/endorser"
+        "advanced/technical/information-system/what-is-a-digital-identity",
+        "advanced/technical/information-system/ERC721",
+        "advanced/technical/information-system/components/witness",
+        "advanced/technical/information-system/components/endorser"
       ]
     },
     {
