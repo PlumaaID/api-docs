@@ -32,7 +32,7 @@
     },
     {
       "name": "Avanzado",
-      "url": "advanced"
+      "url": "technical"
     },
     {
       "name": "Referencia de API",
@@ -58,14 +58,32 @@
   ],
   "navigation": [
     {
-      "group": "Básicos",
+      "group": "Comenzando",
       "pages": [
         "introduction",
-        "basics/what-is-plumaa-id",
-        "basics/foundations",
-        "basics/terminology",
-        "basics/manifesto",
-        "basics/FAQ"
+        "introduction/quickstart",
+        "introduction/sign-documents",
+        "introduction/tokenize-your-assets",
+        "introduction/borderless-payments",
+        "introduction/interact-with-dapps"
+      ]
+    },
+    {
+      "group": "Casos de uso",
+      "pages": [
+        "use-cases/documents",
+        "use-cases/verify-identity",
+        "use-cases/authenticate"
+      ]
+    },
+    {
+      "group": "Conceptos",
+      "pages": [
+        "concepts/what-is-plumaa-id",
+        "concepts/FAQ",
+        "concepts/foundations",
+        "concepts/terminology",
+        "concepts/manifesto"
       ]
     },
     {
@@ -76,7 +94,7 @@
       ]
     },
     {
-      "group": "Guías app",
+      "group": "Aplicación Móvil",
       "pages": [
         "guides/app/onboarding",
         "guides/app/sign-a-message",
@@ -85,7 +103,7 @@
       ]
     },
     {
-      "group": "Guías webapp",
+      "group": "Back Office",
       "pages": [
         "guides/webapp/setup-organization",
         "guides/webapp/add-member",
@@ -97,36 +115,27 @@
     {
       "group": "Firma Electrónica",
       "pages": [
-        "advanced/electronic-signature/overview",
-        "advanced/electronic-signature/what-is-an-electronic-signature",
-        "advanced/electronic-signature/what-is-an-advanced-electronic-signature",
-        "advanced/electronic-signature/trust-service-providers",
-        "advanced/electronic-signature/data-message-conservation"
+        "technical/electronic-signature/overview",
+        "technical/electronic-signature/what-is-an-electronic-signature",
+        "technical/electronic-signature/what-is-an-advanced-electronic-signature",
+        "technical/electronic-signature/trust-service-providers",
+        "technical/electronic-signature/data-message-conservation"
       ]
     },
     {
       "group": "Sistema de Información",
       "pages": [
-        "advanced/information-system/overview",
-        "advanced/information-system/what-is-a-digital-identity",
-        "advanced/information-system/ERC721",
-        "advanced/information-system/document-lifecycle"
+        "technical/information-system/overview",
+        "technical/information-system/what-is-a-digital-identity",
+        "technical/information-system/ERC721",
+        "technical/information-system/document-lifecycle"
       ]
     },
     {
       "group": "Componentes del protocolo",
       "pages": [
-        "advanced/information-system/components/witness",
-        "advanced/information-system/components/endorser"
-      ]
-    },
-    {
-      "group": "Casos de uso",
-      "pages": [
-        "use-cases/overview",
-        "use-cases/documents",
-        "use-cases/verify-identity",
-        "use-cases/authenticate"
+        "technical/information-system/components/witness",
+        "technical/information-system/components/endorser"
       ]
     },
     {

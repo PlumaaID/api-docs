@@ -1,0 +1,100 @@
+---
+title: Inicio rápido
+description: "Comienza a usar Plumaa ID y sacarle el jugo a tu e.firma"
+icon: "hand-wave"
+---
+
+En Plumaa ID la _e.firma_ es el corazón de la plataforma. Con ella te autenticas tanto en nuestras APIs a través de nuestras aplicaciones y en servicios digitales de terceros.
+
+Debido a que las claves de la e.firma son almacenadas en tu dispositivo móvil, el primer paso para comenzar a utilizar Plumaa ID es descargar la aplicación en tu dispositivo móvil con el que te podrás autenticar en nuestra plataforma y las de terceros.
+
+## Usando la aplicación móvil
+
+<Steps>
+  <Step title="Descarga la app">
+    La aplicación está disponible en las tiendas de aplicaciones de [Apple AppStore](https://apps.apple.com/mx/app/plumaa-id/id6475269207) y [Google Play](https://play.google.com/store/apps/details?id=io.plumaa.app).
+
+    <a href="https://apps.apple.com/mx/app/plumaa-id/id6475269207" target="_blank">
+      <img width="150" noZoom src="/images/introduction/quickstart/download-appstore.svg" />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=io.plumaa.app" target="_blank">
+      <img width="150" noZoom src="/images/introduction/quickstart/download-google-play.png" />
+    </a>
+    
+    <img width="400" src="/images/introduction/quickstart/app-preview.png" />
+
+    Debido a que tu método de autenticación es tu e.firma, no es necesario realizar un registro en la aplicación. La aplicación toma datos como tu correo electrónico y nombre para mostrarlos en la aplicación.
+  </Step>
+  <Step title="Desempolva tu e.firma">
+    Si tú como persona física o moral ya cuentas con una e.firma, es momento de sacarla del cajón y comenzar a utilizarla.
+
+    <Tip>
+      El [SAT](/concepts/terminology#servicio-de-administracion-tributaria-sat) es la autoridad certificadora que emite las e.firmas en México. Si aún no cuentas con una, te recomendamos visitar su [sitio web](https://www.sat.gob.mx/tramites/16703/obten-tu-certificado-de-e.firma) para obtener la tuya.
+    </Tip>
+
+    Necesitarás 3 cosas para comenzar a utilizar Plumaa ID (todos estarán en tu USB que te entregaron al obtener tu e.firma):
+
+    1. **[Certificado de e.firma](/concepts/terminology#certificado-de-firma-electronica-avanzada)**: Un archivo `.cer` que fué firmado por la autoridad y te identifica.
+    2. **[Llave privada](/concepts/terminology#llave-privada)**: Un archivo `.key` que es necesario para firmar mensajes de datos.
+    3. **[Contraseña de e.firma](/concepts/terminology#contrasena-de-la-llave-privada-passphrase)**: Una contraseña que es necesaria para desbloquear tu llave privada.
+  </Step>
+  <Step title="Importa tu certificado de e.firma">
+    Para importar tu certificado de e.firma, abre la aplicación y sigue las instrucciones en pantalla. Llegarás a una sección donde podrás seleccionar tu certificado de e.firma.
+
+    Aprende sobre las opciones para [importar tus archivos](#como-importo-mis-archivos)
+
+    <img width="300" src="/images/introduction/quickstart/import-certificate.png" />
+  </Step>
+  <Step title="Importa tu llave privada">
+    Luego de importar tu certificado, la aplicación te pedirá tu llave privada. Sigue las instrucciones en pantalla para seleccionar tu llave privada.
+
+    Aprende sobre las opciones para [importar tus archivos](#como-importo-mis-archivos)
+
+    <img width="300" src="/images/introduction/quickstart/import-private-key.png" />
+  </Step>
+  <Step title="Encripta tu e.firma">
+    Una vez que hayas importado tu certificado y llave privada, la aplicación te pedirá tu contraseña de e.firma. Esta contraseña es necesaria para desbloquear tu llave privada y firmar mensajes de datos.
+
+    Plumaa ID la utilizará una única vez para desencriptar tu llave privada y reencriptarla con una contraseña de 256 bits protegida por el método de autenticación de tu dispositivo móvil (PIN, huella dactilar o reconocimiento facial).
+
+    <img width="300" src="/images/introduction/quickstart/encrypt-efirma.png" />
+  </Step>
+  <Step title="Listo 🥳">
+    Ahora ya puedes utilizar tu e.firma como todo un pro.
+  </Step>
+</Steps>
+
+### ¿Cómo importo mis archivos?
+
+Para subir tu certificado y llave privada, puedes hacerlo de dos formas:
+
+<AccordionGroup>
+  <Accordion title="Comparte tus archivos por medios ópticos" icon="qrcode">
+    La aplicación móvil incluye un lector de QRs que te permite transmitir tu e.firma hacia tu dispositivo a través de medios ópticos y sin necesidad de que los datos sensibles de tu e.firma sean enviados a través de internet.
+
+    Así, Plumaa ID nunca accede a los archivos sensibles de tu firma, que se mantienen seguros en tu dispositivo.
+
+    Para utilizar este servicio, dirígete a nuestra [página de onboarding](https://onboarding.plumaa.id) y sigue las instrucciones en conjunto con la aplicación móvil.
+  </Accordion>
+
+  <Accordion title="Con el archivo en tu dispositivo móvil" icon="file-export">
+    Esta opción te permite seleccionar un archivo directamente desde el sistema de archivos de tu dispositivo móvil.
+
+    Para mover los archivos de tu e.firma a tu dispositivo móvil, puedes hacerlo a través de un cable USB.
+
+    <Note>Esta es usualmente la opción más difícil debido a que los formatos de archivos son comúnmente no reconocidos por los dispositivos.</Note>
+  </Accordion>
+</AccordionGroup>
+
+### Onboarding en video
+
+<iframe
+  height="500"
+  src="https://www.youtube.com/embed/17N5IPgrJ60"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+
