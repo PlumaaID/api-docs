@@ -5,7 +5,9 @@ description: 'Descubre qué es Plumaa ID y cómo puede ayudarte'
 
 Plumaa ID es la primera billetera no custodial basada en la e.firma del [SAT](/concepts/terminology#servicio-de-administracion-tributaria-sat). Como usuario, puedes utilizar la seguridad de la firma electrónica avanzada para recibir pagos de forma inmediata con _settlement_ automático y sin intermediarios. Además, podrás firmar documentos en conformidad con los requisitos de la [NOM-151](/advanced/technical/electronic-signature/trust-service-providers#certificados-de-nom-151) y la Ley de [Firma Electrónica Avanzada](/advanced/technical/electronic-signature/what-is-an-advanced-electronic-signature).
 
+<Frame>
 <img height="200" src="/images/concepts/what-is-plumaa-id/main.png" />
+</Frame>
 
 ## ¿Cómo funciona Plumaa ID?
 
@@ -15,7 +17,9 @@ Al abrir la aplicación por primera vez, te pediremos 3 cosas:
 2. **[Llave privada](/concepts/terminology#llave-privada)**: Esta llave es generada por ti y es necesaria para firmar mensajes de datos. Se encuentra encriptada con una [contraseña](/concepts/terminology#contrasena-de-la-llave-privada-passphrase) que solo tú conoces.
 3. **[Contraseña de e.firma](/concepts/terminology#contrasena-de-la-llave-privada-passphrase)**: Esta contraseña es necesaria para desencriptar tu llave privada y firmar mensajes de datos.
 
+<Frame caption="La llave, el certificado y la contraseña sólo se usan del lado del cliente. El dispositivo comunica sólo el certificado.">
 <img src="/images/concepts/what-is-plumaa-id/how-it-works.png" />
+</Frame>
 
 Tu contraseña será utilizada una sóla vez para desencriptar tu llave privada y reencriptarla con una contraseña de 256 bits protegida por el método de autenticación de tu dispositivo móvil (PIN, huella dactilar o reconocimiento facial).
 
@@ -29,7 +33,7 @@ En la actualidad múltiples gobiernos en el mundo han adoptado la firma electró
 
 <Info>La Comisión de las Naciones Unidas para el Derecho Mercantil Internacional (UNCITRAL) definió en 2001 una [Ley Modelo](https://uncitral.un.org/es/node/778) para ser utilizado como referencia por diversos países. La lista de [status de implementación](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_signatures/status) incluye a México.</Info>
 
-En el caso de México, a través de la <Tooltip tip="Ley en México que establece las reglas de la firma electrónica para actos entre particulares y servicios públicos">Ley de Firma Electrónica Avanzada</Tooltip> la _Secretaria de Economía_ fué designada responsable de establecer las normas y procedimientos para la emisión de certificados de firma electrónica avanzada a través de un modelo que permite a [proveedores de servicios de certificación (o PSCs)](/advanced/technical/electronic-signature/trust-service-providers.mdx) autorizados por el _Banco de México_, emitir certificados de <Tooltip tip="Término especial utilizado por la ley mexicana para referirse a firmas criptográficas que ofrecen no repudio">firma electrónica avanzada</Tooltip> a personas físicas y morales.
+En el caso de México, a través de la <Tooltip tip="Ley en México que establece las reglas de la firma electrónica para actos entre particulares y servicios públicos">Ley de Firma Electrónica Avanzada</Tooltip> la _Secretaria de Economía_ fué designada responsable de establecer las normas y procedimientos para la emisión de certificados de firma electrónica avanzada a través de un modelo que permite a [proveedores de servicios de certificación (o PSCs)](/advanced/technical/electronic-signature/trust-service-providers) autorizados por el _Banco de México_, emitir certificados de <Tooltip tip="Término especial utilizado por la ley mexicana para referirse a firmas criptográficas que ofrecen no repudio">firma electrónica avanzada</Tooltip> a personas físicas y morales.
 
 Bajo este marco, el principal distribuidor de certificados de firma electrónica avanzada en México ha sido el _Servicio de Administración Tributaria_ (SAT) que ha emitido certificados de firma electrónica avanzada a personas físicas y morales de forma gratuita desde 2005 como parte de sus esfuerzos de digitalización de la _contabilidad electrónica_.
 
@@ -53,13 +57,17 @@ Plumaa ID es un ecosistema de servicios e infraestructura para el uso de firma e
 
 ### Aplicación Móvil
 
+<Frame>
 <img width="300" src="/images/concepts/what-is-plumaa-id/app.png" />
+</Frame>
 
 La aplicación de Plumaa ID está dirigida a usuarios finales y permite firmar documentos y autenticarse en servicios digitales.
 
 ### [Aplicación Web](https://app.plumaa.id)
 
+<Frame>
 <img width="500" src="/images/concepts/what-is-plumaa-id/webapp.png" />
+</Frame>
 
 La aplicación web de Plumaa ID permite a los usuarios gestionar sus documentos y configuraciones de cuenta.
 

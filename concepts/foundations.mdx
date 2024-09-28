@@ -98,6 +98,7 @@ Dicho algoritmo prueba con certeza el vínculo entre la firma y una clave públi
 
 En esencia, la cadena de confianza es un procedimiento de múltiples firmas de certificados de autoridad.
 
+<Frame>
 ```mermaid
 ---
 title: Cadena de confianza
@@ -111,6 +112,7 @@ flowchart TB
     PSCs -- firma/certifica --> Persona
     Persona -- firma --> Documento
 ```
+</Frame>
 
 ## Dependencia en la Infraestructura de Seguridad Extendida (IES)
 
@@ -118,7 +120,9 @@ La [Infraestructura de Seguridad Extendida del Banco de México](https://www.ban
 
 Este modelo sostiene la cadena de confianza utilizando el mismo algoritmo de firmado y la misma autoridad certificadora (Banxico), lo que garantiza la interoperabilidad entre los certificados emitidos por los PSCs.
 
+<Frame>
 <img width="500" src="/images/foundations/ies-model.png" />
+</Frame>
 
 ## Validación de Certificado - Online Certificate Status Protocol (OCSP)
 

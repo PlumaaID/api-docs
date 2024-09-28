@@ -10,23 +10,30 @@ Sus certificaciones son documentos electrónicos emitidos por el Banco de Méxic
 1. Certificados de Firma Electrónica Avanzada
 2. Certificados de Conservación de Mensajes de Datos (NOM-151)
 
-
 ## Certificados de Firma Electrónica Avanzada
 
 El certificado de firma electrónica avanzada es un documento electrónico emitido por un PSC que contiene una llave pública y los datos de identificación asociados a dicha llave pública. Este certificado es firmado electrónicamente por el PSC con el mismo algoritmo que utilizaría un ciudadano común.
 
 Este certificado no puede ser falsificado debido a que se necesitaría la llave privada del PSC para firmar un certificado falso. En este caso, los mismos procedimientos físicos que se llevan a cabo para la emisión de certificados de NOM-151 se llevan a cabo para la emisión de certificados de firma electrónica avanzada.
 
+### Lista de Revocación de Certificados
+
+Los PSCs están obligados a mantener una lista de revocación de certificados de firma electrónica que contenga los certificados que han sido revocados. Esta lista es accesible a través de un protocolo de red llamado [Online Certificate Status Protocol (OCSP)](https://es.wikipedia.org/wiki/Online_Certificate_Status_Protocol) con el cuál Plumaa verifica la validez de los certificados utilizados en cada firma que procesa.
+
+La ventaja de este mecanismo es que en caso de pérdida o robo, un usuario puede reportarlo al PSC para que se añada a la lista de revocación, evitando así que el atacante pueda utilizar la firma del usuario para fines maliciosos. 
+
+Por protocolo, esto permite a los PSC revocar un certificado a discreción y fuera del control de la plataforma de Plumaa ID.
+
+<Note>
+  Sólo se pueden revocar los certificados de firma electrónica, no los certificados de conservación de mensajes de datos.
+</Note>
+
+<Note>
+  Aún si el certificado de firma electrónico es revocado, la [wallet](/advanced/wallet) seguirá siendo controlada por tu llave privada aunque no podrás firmar documentos con validez legal.
+</Note>
+
 ## Certificados de NOM-151
 
 El certificado de NOM-151 conforme a la norma NOM-151-SCFI-2016 (Requisitos que deben observarse para la conservación de mensajes de datos y digitalización de documentos) es un documento electrónico emitido por un PSC que contiene el digestivo con el cuál se comprueba la integridad de un documento (ver [fundamentos técnicos](/advanced/technical/electronic-signature/what-is-an-advanced-electronic-signature#funcion-digestivo)).
 
 Este certificado, además de contener el digestivo, contiene la fecha de emisión y la firma electrónica del PSC. Aún cuando se podría argumentar que el PSC está en una posición a través de la cuál podría firmar una fecha distinta, en la práctica, existen una serie de procedimientos físicos que lleva a cabo el proveedor para asegurar que la infraestructura física no ha sido vulnerada.
-
-### Lista de Revocación de Certificados
-
-Los PSCs están obligados a mantener una lista de revocación de certificados que contenga los certificados que han sido revocados. Esta lista es accesible a través de un protocolo de red llamado [Online Certificate Status Protocol (OCSP)](https://es.wikipedia.org/wiki/Online_Certificate_Status_Protocol) con el cuál Plumaa verifica la validez de los certificados utilizados en cada firma que procesa.
-
-La ventaja de este mecanismo es que en caso de pérdida o robo, un usuario puede reportarlo al PSC para que se añada a la lista de revocación, evitando así que el atacante pueda utilizar la firma del usuario para fines maliciosos. 
-
-Por protocolo, esto permite a los PSC revocar un certificado a discreción y fuera del control de la plataforma de Plumaa ID.

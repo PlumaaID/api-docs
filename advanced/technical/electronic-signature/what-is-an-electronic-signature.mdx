@@ -37,6 +37,7 @@ Alicia y Bob desean comunicarse de forma segura. Idealmente, ambos están buscan
 
 Para lograr esto, ambos utilizan una caja especial que tiene 2 llaves: una que gira en sentido horario y otra en sentido antihorario.
 
+<Frame>
 ```mermaid
 ---
 title: Estados de la caja
@@ -52,6 +53,7 @@ graph LR
     C2 -- Sentido Antihorario --> A
     A -- Sentido Antihorario --> C1
 ```
+</Frame>
 
 Este sistema de caja permite que si Alice mantiene la llave que gira en sentido horario en privado y comparte públicamente la llave que gira en sentido antihorario, entonces Bob podría utilizar su llave pública para cerrar la caja de tal forma que **solo Alicia podría acceder a su contenido**. 
 
@@ -61,6 +63,7 @@ Por su parte, una amenaza de este modelo es que Alice no tendría forma de verif
 
 De esta forma, el contenido de la caja estaría firmado por Bob.
 
+<Frame>
 ```mermaid
 ---
 title: Estados de la caja
@@ -76,6 +79,7 @@ graph LR
     C2 -- Llave Pública --> A
     A -- Llave Pública --> C1
 ```
+</Frame>
 
 Este principio es la base de la criptografía RSA-
 

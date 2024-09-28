@@ -87,7 +87,9 @@
       "pages": [
         "advanced/overview",
         "advanced/organizations",
-        "advanced/documents"
+        "advanced/documents",
+        "advanced/tokenization",
+        "advanced/wallet"
       ]
     },
     {
@@ -102,10 +104,8 @@
     {
       "group": "Sistema de Información",
       "pages": [
-        "advanced/technical/information-system/what-is-a-digital-identity",
-        "advanced/technical/information-system/ERC721",
-        "advanced/technical/information-system/components/witness",
-        "advanced/technical/information-system/components/endorser"
+        "advanced/technical/information-system/witness",
+        "advanced/technical/information-system/endorser"
       ]
     },
     {

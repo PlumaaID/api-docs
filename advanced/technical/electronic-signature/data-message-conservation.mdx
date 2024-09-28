@@ -32,6 +32,7 @@ Supongamos que tenemos 8 mensajes de datos y queremos conservarlos en un sólo d
 
 Al repetir este proceso, se obtendrán 2 digestivos en el siguiente nivel, y finalmente 1 sólo digestivo en la raíz del árbol.
 
+<Frame>
 ```mermaid
 ---
 title: Árbol de Merkle
@@ -95,6 +96,7 @@ graph BT
   HABCD --> HABCDEFGH
   HEFGH --> HABCDEFGH
 ```
+</Frame>
 
 La raíz del Árbol se coloca en la cadena de bloques para que cualquier persona pueda verificar de forma pública que un mensaje de datos pertenece a la raíz del árbol registrada en la fecha del bloque.
 
@@ -112,6 +114,7 @@ Este conjunto de hashes que permiten recrear la raíz del árbol es conocido com
 
 <Check>En caso de que la raíz obtenida coincida con alguna que se pueda encontrar de forma pública y con fecha en la blockchain, entonces se puede asumir con seguridad que el documento fue conservado desde el momento en que la raíz se registró en un bloque.</Check>
 
+<Frame>
 ```mermaid
 ---
 title: Árbol de Merkle
@@ -185,6 +188,7 @@ graph BT
   style HAB stroke:#2D9AFE,stroke-width:2px
   style HEFGH stroke:#2D9AFE,stroke-width:2px
 ```
+</Frame>
 
 - En _Azul_, los elementos que se presentan para verificar la inclusión de un mensaje de datos.
 - En _Amarillo_, los elementos que se producen al aplicar la función de hash a los elementos en _Azul_.
@@ -195,7 +199,7 @@ graph BT
 
 Para validar la conservación de un mensaje de datos de forma descentralizada y sin necesidad de la intermediación de Plumaa ID, es suficiente con hacer una consulta utilizando el digestivo del mensaje de datos y su _merkle path_ a algún contrato inteligente que implemente este mecanismo.
 
-<Tip>En el caso de Plumaa ID, la conservación es garantizada por el [Testigo](/advanced/technical/information-system/components/witness) del sistema de información de Plumaa ID</Tip>
+<Tip>En el caso de Plumaa ID, la conservación es garantizada por el [Testigo](/advanced/technical/information-system/witness) del sistema de información de Plumaa ID</Tip>
 
 ### Margen de error del timestamp
 
