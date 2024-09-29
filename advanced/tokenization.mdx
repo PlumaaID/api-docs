@@ -17,46 +17,6 @@ Para lograr esto, la LGTOC establece que los títulos de crédito pueden ser rep
 Al referenciar un activo como un título de crédito a la blockchain, se garantiza la **integridad** y **autenticidad** del activo, además de permitir la **trazabilidad** de los endosos de forma pública y segura.
 </Tip>
 
-<Steps>
-  <Step title="Crear un documento endosable">
-    El primer paso para tokenizar un activo es [crear un documento](/advanced/documents#creacion-de-documentos) en Plumaa ID que contenga el derecho endosable que se quiera tokenizar.
-    <Tip>
-    Plumaa ID tiene predefinidos 4 tipos de mensajes de datos: **textos**, **PDFs**, **pagarés** y **JSON**. Todos son tokenizables.
-    </Tip>
-  </Step>
-  <Step title="Selecciona el inicio de la cadena de endosos">
-    Una vez creado el documento. Plumaa ID mostrará una sección de tokenización en la página de documento a los miembros de la organización donde se creó.
-
-    <Frame>
-    [![Tokenización de un documento](/images/advanced/tokenization/tokenization-block.png)](/advanced/documents#tokenizacion-de-un-documento)
-    </Frame>
-
-    Desde aquí, podrás seleccionar el primer propietario de la representación digital del documento. Una vez seleccionado, la plataforma emitirá una autorización
-    digital para reclamar el documento tokenizado.
-  </Step>
-  <Step title="Que tu usuario reclame el documento">
-    El primer usuario definido en la cadena de endosos podrá reclamar el documento tokenizado a través de la aplicación móvil de Plumaa ID.
-
-    <Frame>
-      <img width="300" noZoom src="/images/advanced/tokenization/redeem.png" />
-    </Frame>
-  </Step>
-  <Step title="Observa la cadena de endosos">
-    Cuando tu usuario reclame el documento, la cadena de endosos será mostrada en la página del documento. Esta cadena incluirá la fecha de cada endosos y la información de los propietarios en el supuesto que:
-    
-    1. Plumaa ID conozca la identidad de la dirección a la que fué endosado y 
-    2. que el propietario haya establecido un [vínculo](/advanced/organizations#vinculos-con-usuarios) con tu organización.
-  
-    <Frame>
-    [![Cadena de endosos](/images/advanced/tokenization/endorsements.png)](/advanced/documents#cadena-de-endosos)
-    </Frame>
-  </Step>
-</Steps>
-
-<Note>
-Los usuarios de Plumaa ID pueden utilizar este marco de tokenización y endosos digitales para representar cualquier tipo de derecho que pueda ser transferido electrónicamente y que se coloque en un mensaje de datos.
-</Note>
-
 ## ERC-721
 
 El [ERC-721](https://eips.ethereum.org/EIPS/eip-721) es un estándar creado, mantenido y adoptado por la comunidad de desarrolladores blockchain para la representación de activos no fungibles (NFT) en la red Ethereum. Este estándar define una interfaz mínima que los **contratos inteligentes** deben implementar para permitir la gestión de tokens no fungibles.
