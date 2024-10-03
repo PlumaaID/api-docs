@@ -112,7 +112,6 @@
       "group": "Other",
       "pages": [
         "rest/other/get-server-time",
-        "rest/other/get-signature-request-timeseries",
         "rest/other/get-sign-file-url"
       ]
     },

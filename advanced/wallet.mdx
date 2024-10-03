@@ -3,34 +3,88 @@ title: Wallet
 description: 'Aprende cómo funciona la billetera de Plumaa ID'
 ---
 
-La wallet de Plumaa ID es una wallet no-custodial controlada por la e.firma del usuario. El usuario mantiene su llave privada en el dispositivo, con el que firma transacciones que envía directamente a la blockchain y después Plumaa ID puede indexar y mostrar en la interfaz de usuario.
+La wallet de Plumaa ID es una billetera no-custodial controlada por la e.firma del usuario. El usuario mantiene su llave privada en el dispositivo, con el que firma transacciones que envía directamente a la blockchain y después Plumaa ID puede indexar y mostrar en la interfaz de usuario.
 
 ## ¿Cómo funciona?
 
-🚧 En progreso...
+A través de la tecnología _blockchain_ y de _contratos inteligentes_, es posible almacenar la [llave pública](/concepts/terminology#llave-publica) que se incluye en el [certificado de firma electrónica avanzada](/concepts/terminology#certificado-de-firma-electronica-avanzada) en la blockchain. De esta manera, el usuario puede firmar mensajes de datos transaccionales que se envían a la blockchain y son procesados por el contrato inteligente para operar sus fondos.
+
+En concreto, la wallet de Plumaa ID es un _contrato inteligente_ ([Safe\{Wallet\}](/advanced/wallet#safe-wallet)) que se controla a través de la _e.firma_ y que permite al usuario interactuar con sistemas de información de terceros.
+
+<Frame>
+<img width="auto" src="/images/advanced/wallet/wallet.png" />
+</Frame>
 
 ### Características
 
-🚧 En progreso...
+Por su diseño, la wallet de Plumaa ID:
+
+- **Es no-custodial**: el usuario mantiene el control de sus fondos y no depende de entidades terceras para la administración de sus activos.
+- **Reduce riesgos de privacidad**: existe menor riesgo de una filtración de datos y riesgos de ciberseguridad al no depender de tus documentos oficiales y datos en servidores de terceros.
+- **Es interoperable**: la wallet de Plumaa ID puede ser utilizada en cualquier sistema que soporte conexión con wallets del ecosistema de Ethereum; interactúa con miles de aplicaciones financieras que no requieren de un intermediario.
+- **Extremadamente segura**: la seguridad es la misma que la de la firma electrónica avanzada; el mecanismo más seguro para firmado en México.
 
 ## Seguridad
 
-🚧 En progreso...
+El equipo de tecnología de Plumaa ID es un equipo experimentado en el desarrollo de _contratos inteligentes_ que han facilitado más de **7 TUSD** (_trillions_) en transacciones en las principales ecosistemas blockchain. 
+
+Este grado de protección es posible debido a que nuestro enfoque de seguridad es basado en _garantías_ en vez de _controles_; es decir, se basa en premisas matemáticas y criptográficas que garantizan la seguridad de los fondos y la integridad de las transacciones. Algunas de estas garantías son:
+
+- **Transparencia**: todos los contratos inteligentes de Plumaa ID son de código abierto y auditados por terceros.
+- **Descentralización**: la wallet de Plumaa ID no depende de un servidor centralizado y es controlada por el usuario.
+- **Inmutabilidad**: las transacciones en la blockchain son inmutables y no pueden ser alteradas, asegurando la cadena de custodia de los fondos y títulos de crédito.
 
 ### Recuperación
 
-🚧 En progreso...
+_Un gran poder conlleva una gran responsabilidad_; la seguridad de tu wallet de Plumaa ID depende de ti. Por esta razón, es importante guardar los archivos originales de tu e.firma y tu contraseña de la llave privada en un lugar seguro al que solo tú tengas acceso.
+
+<Warning>
+Si pierdes tu e.firma o tu contraseña de la llave privada, no podrás recuperar tus fondos. Plumaa ID no tiene acceso a tus fondos ni puede recuperarlos.
+</Warning>
+
+<Note>
+En el futuro, Plumaa ID planea ofrecer procedimientos para la recuperación de fondos en caso de pérdida de la e.firma o la contraseña de la llave privada.
+</Note>
 
 ## Arquitectura
 
-🚧 En progreso...
+La wallet de Plumaa ID se compone de diversas piezas que hacen posible enviar una transacción. Esta es enviada a un _empaquetador_ de transacciones, quien paga por su ejecución y es reembolsado a través de un _patrocinador_ o directamente desde los dólares digitales en la wallet del usuario.
+
+<Frame caption="Los delegan la ejecución de las transacciones a un empaquetador, permitiendo pago de comisiones en USDC y patrocinios de transacción">
+<img width="auto" src="/images/advanced/wallet/architecture.png" />
+</Frame>
 
 ### Safe\{Wallet\}
 
-🚧 En progreso...
+<Tip>
+Aprende más sobre Safe en su [sitio web oficial](https://safe.global).
+</Tip>
+
+La tecnología de Safe actualmente asegura una gran cantidad de activos. Ha sido fuertemente auditado desde el 2018 y se ha convertido en la selección por defecto de billetera digital para los amantes de la seguridad, incluyendo **DAOS**, compañías web3 e individuos como **Vitalik Buterin**. Además, más de 200 proyectos están construyendo sobre Safe y se espera que este número siga creciendo.
+
+<CardGroup cols={2}>
+  <Card title="+100B Asegurados" icon="money-check-dollar" href="https://dune.com/safe">
+    Más de 100 billones de dólares en activos asegurados por Safe
+  </Card>
+  <Card title="Formalmente verificado" icon="function" href="https://docs.safe.global/advanced/smart-account-audits">
+    Safe ha sido auditado por académicos y expertos en seguridad
+  </Card>
+</CardGroup>
+
+A través de Plumaa ID, más de 22 millones de personas tienen acceso directo y sin complicaciones a servicios digitales y financieros con la misma calidad que usarían los mayores expertos en seguridad financiera y criptográfica.
 
 ### `@plumaa/signer`
 
-🚧 En progreso...
+Para hacer que la firma electrónica pueda ser utilizada en una Safe\{Wallet\}, desarrollamos un smart contract signer que permite firmar transacciones y darle el formato necesario para su verificación en la blockchain.
+
+<Card 
+  title="Librería en NPM"
+  href="https://www.npmjs.com/package/@plumaa/signer"
+  icon="npm"
+>
+  La librería `@plumaa/signer` permite firmar transacciones con la e.firma de Plumaa ID
+</Card>
 
 ### Pimlico Bundler
+
+El bundler de Pimlico es un servicio que permite a los usuarios enviar transacciones a la blockchain sin tener que pagar comisiones en criptomonedas. En su lugar, los usuarios pueden pagar las comisiones en dólares digitales.

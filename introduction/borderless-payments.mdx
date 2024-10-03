@@ -1,7 +1,98 @@
 ---
 title: Pagos transfronterizos
-description: 'Aprende cómo firmar contratos con Plumaa ID'
+description: Envía y recibe pagos en dólares digitales de forma inmediata con la seguridad de tu e.firma
 icon: "money-check-dollar"
 ---
 
-🚧 En progreso...
+Plumaa ID permite a personas físicas y morales enviar y recibir pagos en dólares digitales de forma inmediata. La e.firma de Plumaa ID garantiza la integridad y autenticidad de las transacciones, permitiendo a cualquier persona física o moral enviar y recibir pagos en dólares digitales de forma inmediata gracias a nuestra [wallet no custodial](/advanced/wallet).
+
+<Tip>
+Para aprender más sobre el funcionamiento técnico de la wallet, visita la sección de [wallet](/advanced/wallet).
+</Tip>
+
+## ¿Cómo es posible pagar con e.firma?
+
+Contraintuitivamente, la firma electrónica [aparece entre los servicios de sistemas de pagos del Banco de México](https://www.banxico.org.mx/servicios/firma-electronica-autenticaci.html). En esencia, algunos servicios como SPEI y SPID funcionan bajo los principios de la [firma electrónica avanzada](/advanced/technical/electronic-signature/what-is-an-advanced-electronic-signature) para garantizar la integridad y autenticidad de las transacciones bancarias.
+
+<Frame caption="Sitio oficial del Banco de México a 3 de octubre de 2024">
+<img height="auto" src="/images/introduction/borderless-payments/banxico-services.png" />
+</Frame>
+
+En esencia, el sistema financiero ya utiliza la [infraestructura de seguridad extendida (IES) de Banxico](/concepts/foundations#dependencia-en-la-infraestructura-de-seguridad-extendida-ies) para operaciones bancarias. Plumaa ID democratiza el acceso a esta infraestructura para permitir a cualquier persona física o moral enviar y recibir pagos en dólares digitales de forma inmediata.
+
+## Dólares digitales
+
+La aplicación móvil muestra por defecto el balance del usuario en dólares digitales. Estos dólares digitales son emitidos por un emisor de dólares digitales como [Circle](https://circle.com), quien emite USDC; un token respaldado en una relación 1:1 con el dólar estadounidense a través de diversos instrumentos financieros como depósitos bancarios y bonos del tesoro.
+
+<Note>
+Plumaa ID **no es emisor de dólares digitales**. Los dólares digitales son emitidos por un tercero y no tenemos control sobre su emisión ni transaccionabilidad.
+</Note>
+
+<Frame>
+<img width="auto" src="/images/introduction/borderless-payments/usdc-payment.png" />
+</Frame>
+
+### Recibir
+
+Para aceptar dólares digitales en tu wallet, sigue estos pasos:
+
+<Steps>
+  <Step title="Abre tu wallet">
+    En la aplicación móvil, abre la sección de wallet y selecciona la opción de "Recibir"
+
+    <Frame>
+      <img width="300" noZoom src="/images/introduction/borderless-payments/receive.png" />
+    </Frame>
+  </Step>
+  <Step title="Escanea el QR">
+    La aplicación te mostrará un QR y una dirección pública con la que puedes recibir pagos en dólares digitales.
+
+    <Frame>
+      <img width="300" noZoom src="/images/introduction/borderless-payments/scan.png" />
+    </Frame>
+  </Step>
+</Steps>
+
+### Enviar
+
+Para enviar dólares digitales a otra persona, sigue estos pasos:
+
+<Steps>
+  <Step title="Abre tu wallet">
+    En la aplicación móvil, abre la sección de wallet y selecciona la opción de "Enviar"
+
+    <Frame>
+      <img width="300" noZoom src="/images/introduction/borderless-payments/send.png" />
+    </Frame>
+  </Step>
+  <Step title="Ingresa la información de transferencia">
+    La aplicación de mostrará una ventana donde podrás seleccionar:
+
+    - El activo a enviar (en este caso, dólares digitales o USDC)
+    - La cantidad a enviar
+    - La dirección pública del destinatario (ver [cómo recibir](#recibir))
+
+    <Frame>
+      <img width="300" noZoom src="/images/introduction/borderless-payments/form.png" />
+    </Frame>
+  </Step>
+  <Step>
+    Revisa la información y confirma la transacción.
+
+    <Frame>
+      <img width="300" noZoom src="/images/introduction/borderless-payments/review.png" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Comisiones
+
+**No cobramos comisiones por ninguna transacción** utilizando la aplicación. Sin embargo, la red en donde la transacción se procese sí te cobrará una comisión que será deducida de tu balance en dólares.
+
+<Tip>
+Plumaa ID patrocina tu primera transacción. Después, necesitarás recargar tu cuenta con dólares digitales para seguir enviando pagos.
+</Tip>
+
+<Warning>
+ El estimado de comisión se mostrará en pantalla. Sin embargo, la comisión final puede variar en función de las condiciones de congestión de la red.
+</Warning>
