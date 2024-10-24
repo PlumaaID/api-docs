@@ -70,7 +70,61 @@ stateDiagram-v2
 
 Los documentos en Plumaa ID pueden ser creados desde la interfaz web o a través de la API. El documento puede ser creado como un draft, lo que evitará que los invitados reciban notificaciones hasta que el documento esté listo para ser firmado.
 
-🚧 En progreso...
+<Steps>
+  <Step title="Crear documento">
+    En la sección de documentos de tu organización, haz clic en el botón “Crear documento”.
+  
+    <Frame>
+      <img width="100%" noZoom src="/images/advanced/organizations/download-certificate.png" />
+    </Frame>
+  </Step>
+  <Step title="Campos a rellenar">
+    Al elaborar un documento, es esencial llenar los campos necesarios, los cuales pueden variar según el tipo de documento o su propósito.
+  
+    - **Nombre del documento**: es indispensable que le asignes un nombre a tu documento, para que puedas tener un mejor control al buscarlo en el futuro.
+    - **Organización**: Si tienes más de una organización, puedes seleccionar desde cuál se emitirá el documento.
+    - **Firmantes**: Selecciona a los firmantes de forma simultánea, pero también tienes la opción de agregarlos más adelante.
+    - **Draft**: Si lo deseas, activa la opción de borrador para que otros miembros de tu organización puedan revisarlo.
+    - **Selección de documento**: Recuerda que depende del tipo de documento que hayas elegido te pedirá:
+
+    <Tabs>
+        <Tab title="PDF">
+            Adjuntar el archivo seleccionado.
+
+            <Frame>
+                <img width="100%" noZoom src="/images/advanced/documents/pdf.png" />
+            </Frame>
+        </Tab>
+        <Tab title="Textos">
+            Introduce el texto que deseas redactar.
+
+            <Frame>
+                <img width="100%" noZoom src="/images/advanced/documents/texts.png" />
+            </Frame>
+        </Tab>
+        <Tab title="Pagarés">
+            Al crear un pagaré, deberás completar los siguientes elementos:
+
+            - Moneda: selecciona entre MXN o USD.
+            - Cantidad: ingresa el monto.
+            - Selecciona al "Deudor".
+            - Selecciona al "Acreedor".
+            - Muestra tu geolocalización.
+
+            <Frame>
+                <img width="100%" noZoom src="/images/advanced/documents/ious.png" />
+            </Frame>
+        </Tab>
+        <Tab title="Textos">
+            Integra el mensaje de datos. 
+
+            <Frame>
+                <img width="100%" noZoom src="/images/advanced/documents/json.png" />
+            </Frame>
+        </Tab>
+    </Tabs>
+  </Step>
+</Steps>
 
 ### Invitaciones
 

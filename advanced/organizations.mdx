@@ -95,6 +95,10 @@ Cada usuario que se conecta a Plumaa ID recibe un identificador personal, el cua
 
 ## [Cuotas de documentos](/advanced/organizations#cuotas-de-documentos)
 
+<Tip>
+La sección de cuotas se encuentra en la configuración de la organización en la aplicación web.
+</Tip>
+
 ### Certificados de NOM-151
 
 <Frame>
@@ -135,14 +139,69 @@ El API requiere aprobación manual. Ponte en contacto a [contact@plumaa.id](mail
   </Step>
 </Steps>
 
-### ¿Cómo crear una API Key?
-
-🚧 En progreso...
-
 ## Vínculos con usuarios
 
-🚧 En progreso...
+Una vez que hayas creado tu organización y añadido miembros, es importante que comiences a vincular a los usuarios. Un vínculo permite que un usuario se asocie a una organización, habilitando ciertas funcionalidades, tales como:
+
+- Enviar solicitudes de firmado.
+- Ver y descargar el [certificado de firma electrónica avanzada](#descargar-certificado-de-firma-electrónica-avanzada) de cada usuario.
 
 ### ¿Cómo vincular a un usuario?
 
-🚧 En progreso...
+El proceso se inicia con la organización y concluye con el usuario. Plumaa ID ofrece a la organización dos opciones para vincularlos: a través de un código QR o una URL. Ambas alternativas permiten al usuario acceder directamente al proceso de vinculación.
+
+Para crear un vinculo sigue estos pasos:
+
+<Tabs>
+  <Tab title="Como organización">
+    <Steps>
+      <Step title="Ver vínculos">
+        Desde tu organización, dirígete a la pestaña de “vínculos”.
+      </Step>
+      <Step title="Obtención de enlaces">
+        En el recuadro de “¡Vincula tu organización!”, haz clic en el botón “Copiar” para obtener la URL de invitación.
+
+        Si prefieres descargar el código QR, simplemente haz clic en él para acceder a la opción de descarga.
+
+        <Frame>
+        <iframe
+          src="https://www.youtube.com/embed/GXz0dalqvEk"
+          title="YouTube video player"
+          frameborder="0"
+          width="700"
+          height="400"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Como usuario">
+    <Steps>
+      <Step title="Conectarse a la organización">
+        Puedes dar clic en la URL, o escanear el Código QR que te hayan proporcionado. Este te llevará directo a tu aplicación, y te solicitará si deseas vincularte. 
+      
+        <Frame>
+          <img width="300" noZoom src="/images/advanced/organizations/connect.jpg" />
+
+          <img width="300" noZoom src="/images/advanced/organizations/connect-2.jpg" />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+### Descargar Certificado de Firma Electrónica Avanzada
+
+Es un archivo electrónico que el SAT emplea para certificar la relación entre la identidad de una persona o entidad y su respectivo certificado. 
+
+<Steps>
+  <Step title="Descarga certificado">
+    Una vez establecido el vínculo entre ambas partes, la organización podrá descargar el certificado de cada uno para confirmar su identidad.
+  
+    <Frame>
+      <img width="100%" noZoom src="/images/advanced/organizations/download-certificate.png" />
+    </Frame>
+  </Step>
+</Steps>
