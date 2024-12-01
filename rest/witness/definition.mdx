@@ -1,0 +1,15 @@
+---
+title: Witness Definition
+openapi-schema: Witness
+icon: cube
+---
+
+A witness is an entity representing a proof that a document existed at the time.
+It is used to comply with the law requirement of data conservation.
+
+It may be associated to a [signature request](../signaturerequest/definition) or a [signature request invite](../signaturerequestinvite/definition) to prove that the document was signed at a given time.
+
+The witness itself doesn't include the signature request or the signature request invite, but it is identified by the hash of the message it represents. This hash is replicated across multiple providers to ensure its integrity:
+
+- To the [Witness Protocol](https://witness.co) to replicate across multiple immutable ledgers (for free).
+- To a Trust Provider either individually or using a Merkle Tree to group multiple witnesses into a single certification (both consume credits).

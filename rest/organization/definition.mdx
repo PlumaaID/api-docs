@@ -1,0 +1,21 @@
+---
+title: Organization Definition
+openapi-schema: Organization
+icon: cube
+---
+
+An organization is a group of [subjects](/rest/subject/definition) that share access to the same resources.
+
+Subjects are granted membership to the organization by creating an [organization member](/rest/organizationmember/definition) entity.
+
+An organization can create:
+
+- [Signature Requests](/rest/signaturerequest/definition) to request digital signatures from subjects.
+- [Signature Request Invites](/rest/signaturerequestinvite/definition) to invite subjects to sign requests.
+- [Links](/rest/organizationlink/definition) with subjects to access their digital signature certificates
+- [API Keys](/rest/apikey/definition) to access the API
+- [Tokenized endorsables](/rest/endorsable/definition) to trace documents in the blockchain
+
+<Note>
+An Organization is limited in scope to the assets and resources it owns. It can't access resources from other organizations.
+</Note>

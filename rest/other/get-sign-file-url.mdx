@@ -1,3 +1,14 @@
 ---
+title: Get  signed URL to upload a file
 openapi: get /sign-file-url
 ---
+
+This endpoint returns a signed URL that can be used to upload a file to the server.
+
+The response will return a `filePath` that can be used to upload the file and a `key` that identifies the object in the Plumaa ID storage infrastructure.
+
+Using the `key`, the client can [create a signature request](../signaturerequest/post-signature-request) by providing the `key` as the file argument (depending on the content type).
+
+<Note>
+The signed URL is valid for 15 minutes
+</Note>

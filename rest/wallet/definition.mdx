@@ -1,0 +1,13 @@
+---
+title: Wallet Definition
+openapi-schema: Wallet
+icon: cube
+---
+
+Each [subject](../subject/definition) has a wallet whose address is precalculated and deployed on their first transaction.
+
+This wallet is self-custodial, meaning that the subject is the only one who has access to the private key. The wallet is used to sign transactions and endorse documents.
+
+Each wallet is a smart account that includes a single signer contract deterministically created from a factory deployed through [xdeployer](https://github.com/pcaversaccio/xdeployer) so that every signer contract has the same address in all EVM networks. This signer contract is an implementation of a custom ERC-1271 interface that allows the RSA key to sign on-chain. Signers can be deployed trustlessly by anyone since they're controlled by the account owner.
+
+The smart account is created from the [Safe{Wallet}](https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1) factory and includes a setup call to the RSA signer factory, deploying the signer contract who'll own the account. The account factory is already deployed on all networks with the same address so that the account can be created deterministically in most EVM networks too.

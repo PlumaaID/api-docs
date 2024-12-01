@@ -1,0 +1,23 @@
+---
+title: About Price Oracle
+openapi-schema: PriceOracle
+icon: crystal-ball
+---
+
+Price oracle is a collection of endpoints that expose price feeds indexed by Plumaa ID and exposed through the API for popular asset pairs.
+
+<Note>
+Plumaa ID does not provide liquidity for any of these pairs. The prices are provided by third-party oracles.
+</Note>
+
+The time series are calculated by indexing Chainlink [Data Feeds](https://data.chain.link/feeds). When prices are not immediately available (e.g. MXN/USDC), then the price is calculated by crossing the prices of the two pairs (e.g. MXN/USD and USD/USDC).
+
+The implementation of the price oracle is open-sourced in our protocol indexer
+
+<Card 
+  title="Protocol Indexer"
+  href="https://github.com/PlumaaID/protocol-indexer"
+  icon="monitor-waveform"
+>
+  An indexer using [ponder.sh](https://ponder.sh) to index relevant information for the Plumaa ID suite of tools.
+</Card>

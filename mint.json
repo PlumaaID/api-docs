@@ -109,15 +109,19 @@
       ]
     },
     {
-      "group": "Other",
+      "group": "Introduction",
       "pages": [
-        "rest/other/get-server-time",
-        "rest/other/get-sign-file-url"
+        "rest/welcome",
+        "rest/quickstart",
+        "rest/concepts",
+        "rest/overview",
+        "rest/authentication"
       ]
     },
     {
       "group": "Certificate",
       "pages": [
+        "rest/certificate/definition",
         "rest/certificate/get-certificates",
         "rest/certificate/get-certificate"
       ]
@@ -125,6 +129,7 @@
     {
       "group": "Issuer",
       "pages": [
+        "rest/issuer/definition",
         "rest/issuer/get-issuers",
         "rest/issuer/get-issuer"
       ]
@@ -132,22 +137,23 @@
     {
       "group": "Organization",
       "pages": [
-        "rest/organization/get-organization-links",
-        "rest/organization/get-organization-link",
+        "rest/organization/definition",
         "rest/organization/put-organization"
       ]
     },
     {
-      "group": "SignatureRequestInvite",
+      "group": "Signature Request Invite",
       "pages": [
+        "rest/signaturerequestinvite/definition",
         "rest/signaturerequestinvite/get-signature-request-invites",
         "rest/signaturerequestinvite/get-signature-request-invite",
         "rest/signaturerequestinvite/post-signature-request-invite"
       ]
     },
     {
-      "group": "SignatureRequest",
+      "group": "Signature Request",
       "pages": [
+        "rest/signaturerequest/definition",
         "rest/signaturerequest/get-signature-requests",
         "rest/signaturerequest/get-signature-request",
         "rest/signaturerequest/put-signature-request",
@@ -157,6 +163,7 @@
     {
       "group": "Subject",
       "pages": [
+        "rest/subject/definition",
         "rest/subject/get-subjects",
         "rest/subject/get-subject",
         "rest/subject/get-subject-by-evm-address"
@@ -165,8 +172,10 @@
     {
       "group": "Witness",
       "pages": [
+        "rest/witness/definition",
         "rest/witness/get-witnesses",
         "rest/witness/get-witness",
+        "rest/witness/put-witness",
         "rest/witness/post-witness",
         "rest/witness/post-schedule-grouped-nom151-certification",
         "rest/witness/post-nom151-certification"
@@ -175,6 +184,7 @@
     {
       "group": "Wallet",
       "pages": [
+        "rest/wallet/definition",
         "rest/wallet/get-wallet",
         "rest/wallet/get-wallets"
       ]
@@ -182,37 +192,90 @@
     {
       "group": "Endorsable",
       "pages": [
+        "rest/endorsable/definition",
         "rest/endorsable/get-endorsable",
         "rest/endorsable/get-endorsables"
       ]
     },
     {
-      "group": "EndorseEvent",
+      "group": "Endorse Event",
       "pages": [
+        "rest/endorseevent/definition",
         "rest/endorseevent/get-endorse-event",
         "rest/endorseevent/get-endorse-events"
       ]
     },
     {
-      "group": "ApiKey",
+      "group": "API Key",
       "pages": [
+        "rest/apikey/definition",
         "rest/apikey/put-api-key",
         "rest/apikey/post-api-key",
         "rest/apikey/delete-api-key"
       ]
     },
     {
-      "group": "OrganizationLink",
+      "group": "Organization Link",
       "pages": [
+        "rest/organizationlink/definition",
+        "rest/organizationlink/get-organization-links",
+        "rest/organizationlink/get-organization-link",
         "rest/organizationlink/post-organization-link",
         "rest/organizationlink/delete-organization-link"
       ]
     },
     {
-      "group": "OrganizationMember",
+      "group": "Organization Member",
       "pages": [
+        "rest/organizationmember/definition",
         "rest/organizationmember/post-organization-member",
         "rest/organizationmember/delete-organization-member"
+      ]
+    },
+    {
+      "group": "Timeseries",
+      "pages": [
+        "rest/timeseries/definition",
+        "rest/timeseries/get-signature-request-timeseries"
+      ]
+    },
+    {
+      "group": "Price Oracle",
+      "pages": [
+        "rest/priceoracle/definition",
+        "rest/priceoracle/get-median-mxnusd-rate",
+        "rest/priceoracle/get-median-mxnusd-rates",
+        "rest/priceoracle/get-daily-bucket-mxnusd-rate",
+        "rest/priceoracle/get-daily-bucket-mxnusd-rates",
+        "rest/priceoracle/get-weekly-bucket-mxnusd-rate",
+        "rest/priceoracle/get-weekly-bucket-mxnusd-rates",
+        "rest/priceoracle/get-monthly-bucket-mxnusd-rate",
+        "rest/priceoracle/get-monthly-bucket-mxnusd-rates",
+        "rest/priceoracle/get-median-usdcusd-rate",
+        "rest/priceoracle/get-median-usdcusd-rates",
+        "rest/priceoracle/get-daily-bucket-usdcusd-rate",
+        "rest/priceoracle/get-daily-bucket-usdcusd-rates",
+        "rest/priceoracle/get-weekly-bucket-usdcusd-rate",
+        "rest/priceoracle/get-weekly-bucket-usdcusd-rates",
+        "rest/priceoracle/get-monthly-bucket-usdcusd-rate",
+        "rest/priceoracle/get-monthly-bucket-usdcusd-rates",
+        "rest/priceoracle/get-median-usdcmxn-rate",
+        "rest/priceoracle/get-median-usdcmxn-rates",
+        "rest/priceoracle/get-daily-bucket-usdcmxn-rate",
+        "rest/priceoracle/get-daily-bucket-usdcmxn-rates",
+        "rest/priceoracle/get-weekly-bucket-usdcmxn-rate",
+        "rest/priceoracle/get-weekly-bucket-usdcmxn-rates",
+        "rest/priceoracle/get-monthly-bucket-usdcmxn-rate",
+        "rest/priceoracle/get-monthly-bucket-usdcmxn-rates"
+      ]
+    },
+    {
+      "group": "Other",
+      "pages": [
+        "rest/other/definition",
+        "rest/other/get-server-time",
+        "rest/other/get-sign-file-url",
+        "rest/other/post-publish-challenge"
       ]
     }
   ],

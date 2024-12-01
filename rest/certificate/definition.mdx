@@ -1,0 +1,15 @@
+---
+title: Certificate Definition
+openapi-schema: Certificate
+icon: cube
+---
+
+A certificate is a digitally signed statement from one entity ([the issuer](../issuer/definition)) that another entity ([the subject](../subject/definition)) has a given identity.
+
+The certificate associates a public key with the identity of the subject. The certificate is signed by the issuer to prove the authenticity of the association.
+
+The issuer is a [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority) certified by [Banxico](https://banxico.org.mx/), and the subject is typically a person or organization ("persona física o moral" in México).
+
+<Note>
+Certificates are only accessible to organizations authorized by the owner of the certificate. The subject owner must create an [organization link](../organizationlink/definition) to the organization that will access the certificate.
+</Note>

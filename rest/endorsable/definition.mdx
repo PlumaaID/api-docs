@@ -1,0 +1,21 @@
+---
+title: Endorsable Definition
+openapi-schema: Endorsable
+icon: cube
+---
+
+An Endorsable is a tokenized document in the blockchain created by an [organization](/rest/organization/definition). Given it's nature, it's entirely owned by the mobile app user (a [subject](/rest/subject/definition)) through their [wallet](/rest/wallet/definition) controlled by its digital signature.
+
+Its implementation is compliant with e-commerce regulations and digital stocks under the Mexican legal framework. Every time it's endorsed to a new owner (i.e. transferred), the digital signature is validated and recorded immutably in the blockchain. This way, the ownership history is transparent and secure.
+
+<Note>
+Although the blockchain is public, the content of the Endorsable is not recorded. Instead, only its id is stored given it's the only requirement for tracking purposes.
+</Note>
+
+<Note>
+The API can only access Endorsables within the organization they belong to.
+</Note>
+
+<Tip>
+Endorsables can be traded permissionlessly with third-party infrastructure like [its marketplace in OpenSea.](https://opensea.io/collection/endorser)
+</Tip>
