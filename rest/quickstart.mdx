@@ -4,4 +4,254 @@ description: 'Learn how to create a signature request, send invites and read its
 icon: bolt
 ---
 
-🚧 In progress
+Throughout this guide, we will construct a signature request where users of the Plumaa ID mobile app can sign.
+
+## Get your API key
+
+To get started, you need to [download the app and get onboarded](introduction/quickstart). Once you are setup on the mobile app, you have automatic access to the web app.
+
+[Sign into the webapp](/introduction/quickstart#como-inicio-sesion), [create an organization](/advanced/organizations#crear-una-organizacion) and navigate to their settings. From there, you can [follow our guide to setup an API Key](/advanced/organizations#como-crear-una-api-key).
+
+Once you have an API Key, you're ready to go.
+
+## Upload your content
+
+The first step is to upload the content you want to be signed. This can be a PDF, a raw text file (e.g. a privacy policy), a JSON file or a specialized IOU format (debt acknowledgment).
+
+To upload a file, we offer a [pre-signed URL](/rest/other/get-sign-file-url) that allows you to upload the file directly to our storage infrastructure.
+
+```shell
+curl --request GET \
+  --url https://api.plumaa.id/rest/v1/sign-file-url?filePath=<path-to-file>&md5Checksum=<MD5Checksum> \
+  --header 'Authorization: Bearer <token>'
+```
+
+The API endpoint requires 2 query parameters:
+
+- `filePath`: The path to the file you want to upload. Each organization has its own root directory and files are versioned to ensure they are not overwritten.
+- `md5Checksum`: The MD5 checksum of the file you want to upload. This is used to verify the integrity of the file so it is not corrupted during the upload process.
+
+Once you get a response, you can use the `url` to upload the file and the `key` to reference it when you create the signature request.
+
+For example, to upload a simple text file, you can use the following process:
+
+<Tabs>
+  <Tab title="index.js">
+```js
+import { md5, util } from "node-forge";
+import axios from "axios";
+import plumaaClient from './plumaa-client'
+
+// Our message. It is salted to ensure uniqueness
+const saltedMessage = `Some message you want to get signed. Salt: _${Date.now()}_`
+
+// Obtain the message MD5 checksum
+const md5Checksum = md5
+  .create()
+  .update(util.createBuffer(saltedMessage, "utf8").bytes(), "raw")
+  .digest()
+  .toHex();
+
+// Update
+const { data } = await plumaaClient.signFileUrl({
+  filePath: `/free/${Date.now()}.txt`,
+  md5Checksum,
+});
+
+// Upload the file
+await axios.put(data.url, saltedMessage, {
+  headers: {
+    "Content-MD5": util.encode64(util.hexToBytes(md5Checksum)),
+  },
+});
+```
+  </Tab>
+  <Tab title="plumaa-client.js">
+```js
+import axios from "axios";
+
+const _client = axios.create({
+  baseURL: 'https://api.plumaa.id/rest/v1',
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "text/plain",
+    Authorization: `Bearer <API-KEY>`,
+  },
+});
+
+const plumaaClient = {
+  signFileUrl: async (data) => {
+    const params = new URLSearchParams(data); // md5Checksum, filePath
+    return _client.get(`/sign-file-url?${params.toString()}`);
+  },
+  signatureRequest: {
+    create: async (data) => {
+      return _client.post("/signature-request", data);
+    },
+  },
+  signatureRequestInvite: {
+    create: async (data) => {
+      return _client.post(
+        "/signature-request-invite",
+        data,
+      );
+    },
+  },
+};
+
+export default plumaaClient;
+```
+  </Tab>
+</Tabs>
+
+## Create a signature request
+
+A [signature request](/rest/signaturerequest/definition) is a request to sign a document. It can be sent to one or more signers by creating an [invite](/rest/signaturerequestinvite/definition) for each signer.
+
+To create a signature request, you can call the [POST /signature-request](/rest/signaturerequest/post-signature-request) endpoint.
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "draft": true,
+    "name": "<document name (e.g. privacy policy)>",
+    "content": { ... }, // see below
+    "organization": "<organization id>",
+    "nom151": true
+  }
+}'
+```
+
+<Note>
+The creation endpoint includes a `draft` flag that allows you to create a signature request without sending it to the signers. Requests can be sent later by updating this field to `false` using the [PUT /signature-request/{id}](/rest/signaturerequest/put-signature-request) endpoint.
+</Note>
+
+As you may notice, the `content` field is not fulfilled in the example above.
+
+<Tabs>
+  <Tab title="Raw text content">
+    To create a signature request with a raw text content, you can use the following example. Note the key is that returned from the [sign-file-url](/rest/other/get-sign-file-url) endpoint:
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "draft": true,
+    "name": "<document name (e.g. privacy policy)>",
+    "content": {
+      "raw": "<data.key>"
+    },
+    "organization": "<organization id>",
+    "nom151": true
+  }
+}'
+```
+  </Tab>
+  <Tab title="PDF content">
+    To create a signature request with a PDF content, you can use the following example. Note the key is that returned from the [sign-file-url](/rest/other/get-sign-file-url) endpoint:
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "draft": true,
+    "name": "<document name (e.g. privacy policy)>",
+    "content": {
+      "pdf": "<data.key>"
+    },
+    "organization": "<organization id>",
+    "nom151": true
+  }
+}'
+```
+  </Tab>
+  <Tab title="JSON content">
+    To create a signature request with a JSON content, you can use the following example. Note the key is that returned from the [sign-file-url](/rest/other/get-sign-file-url) endpoint:
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "draft": true,
+    "name": "<document name (e.g. privacy policy)>",
+    "content": {
+      "json": "<data.key>"
+    },
+    "organization": "<organization id>",
+    "nom151": true
+  }
+}'
+```
+  </Tab>
+  <Tab title="IOU content">
+    An IOU content is a specialized version of a raw text. However, it has a predefined template that includes the relevant information create compliant IOU in terms of Mexican regulation.
+
+    To create a signature request with a IOU content, you can use the following example. Note the key is that returned from the [sign-file-url](/rest/other/get-sign-file-url) endpoint:
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "draft": true,
+    "name": "<document name (e.g. privacy policy)>",
+    "content": {
+      "latitude": "<latitude in decimal degrees (e.g. 53.471)>",
+      "longitude": "<longitude in decimald degrees (e.g. 53.471)>",
+      "currency": "<currency code (e.g. MXN)>",
+      "amount": "<amount (e.g. 1000)>",
+      "debtor": "<debtor subject id>",
+      "creditor": "<creditor subject id>",
+      "raw": "<data.key>"
+    },
+    "organization": "<organization id>",
+    "nom151": true
+  }
+}'
+```
+
+  <Warning>
+  Although the IOU will register some values like amount and currency. It's possible to construct an IOU where the raw text doesn't include these values. The way the IOU is constructed is responsability of the organization.
+  </Warning>
+  </Tab>
+</Tabs>
+
+## Create an invite
+
+Once you have created a signature request, you can send invites to the signers. Each invite is tracked individually and will show up in the mobile app for the signer and the webapp for the organization.
+
+To create an invite, you can call the [POST /signature-request-invite](/rest/signaturerequestinvite/post-signature-request-invite) endpoint.
+
+```shell
+curl --request POST \
+  --url https://api.plumaa.id/rest/v1/signature-request-invite \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "input": {
+    "signatureRequest": "<signature request id>",
+    "subject": "<subject id>"
+  }
+}'
+```
+
+<Note>
+To get the `subject id`, you can use the [GET /subject](/rest/subject/get-subject) endpoint. Consider that a [link](/rest/organizationlink/definition) between the subject and the organization must exist before creating the invite.
+</Note>
+
+### Let the signer to invite themselves
